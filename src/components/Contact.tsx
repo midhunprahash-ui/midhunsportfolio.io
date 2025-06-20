@@ -1,3 +1,4 @@
+import React from 'react';
 
 const Contact = () => {
   return (
@@ -10,8 +11,10 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Contact Info */}
+        {/* The grid layout previously had two columns: Contact Info and Contact Form.
+            Now, we only keep the Contact Info column. */}
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-12"> {/* Changed to md:grid-cols-1 */}
+          {/* Contact Info - This section remains */}
           <div>
             <h3 className="text-2xl font-bold mb-6">Get In Touch</h3>
             <div className="space-y-4">
@@ -36,7 +39,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-gray-300">Chennai, India</p>
+                  <p className="text-gray-300">Chennai,</p>
                 </div>
               </div>
 
@@ -75,7 +78,8 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Contact Form - THIS ENTIRE DIV IS REMOVED */}
+          {/*
           <div>
             <form className="space-y-6">
               <div>
@@ -116,6 +120,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
+          */}
         </div>
 
         <div className="text-center mt-16 pt-8 border-t border-gray-800">
