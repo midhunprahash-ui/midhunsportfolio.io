@@ -2,12 +2,12 @@
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop",
-      link: "#",
-      github: "#"
+      title: "Username Matcher",
+      description: "This project explores the feasibility of matching usernames to their corresponding employees using traditional fuzzy string matching techniques. While it may not serve a direct practical purpose, it demonstrates how accurate results can be achieved through classic string similarity algorithms.",
+      tech: ["Fuzzy", "NLP", "RF-Classifier"],
+      image: "https://images.unsplash.com/vector-1750420590703-b8f9338291bc?q=80&w=3254&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      link: "https://username-matcher.onrender.com",
+      github: "https://github.com/midhunprahash-ui/Username_matcher.git"
     },
     {
       title: "Task Management App",
@@ -59,11 +59,11 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300"></div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{project.title}</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
                     <span

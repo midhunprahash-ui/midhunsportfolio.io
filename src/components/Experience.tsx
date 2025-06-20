@@ -2,11 +2,11 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Frontend Developer",
-      company: "Tech Solutions Inc.",
-      period: "2022 - Present",
+      title: "Intern",
+      company: "Orion Governance",
+      period: "Jun - Jul,2025",
       description: "Led development of multiple React applications, mentored junior developers, and implemented modern CI/CD practices. Improved application performance by 40% and reduced load times significantly.",
-      skills: ["React", "TypeScript", "Next.js", "GraphQL"]
+      skills: ["Python", "Fuzzy String matching", "Python in Excel", "Seaborne"]
     },
     {
       title: "Full Stack Developer",
@@ -48,10 +48,10 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div key={index} className="relative mb-12 md:mb-8">
               <div className={`flex flex-col md:flex-row items-start ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-                
+
                 {/* Timeline dot */}
                 <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-3 h-3 bg-blue-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-                
+
                 {/* Content */}
                 <div className={`ml-12 md:ml-0 md:w-1/2 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
                   <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -60,9 +60,9 @@ const Experience = () => {
                       <h4 className="text-lg font-medium text-blue-600">{exp.company}</h4>
                       <p className="text-sm text-gray-500">{exp.period}</p>
                     </div>
-                    
+
                     <p className="text-gray-600 mb-4 leading-relaxed">{exp.description}</p>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {exp.skills.map((skill, skillIndex) => (
                         <span
