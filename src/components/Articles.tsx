@@ -2,37 +2,14 @@
 const Articles = () => {
   const articles = [
     {
-      title: "Building Scalable React Applications",
+      title: "Fetching Files from Google Drive using Google Drive API",
       excerpt: "Learn the best practices for structuring React applications that can grow with your team and requirements. From component organization to state management strategies.",
-      date: "March 15, 2024",
-      readTime: "8 min read",
-      tags: ["React", "Architecture", "Best Practices"],
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=250&fit=crop"
+      date: "June 20, 2025",
+      readTime: "3 min read",
+      tags: ["Python", "APIs", "Clients", "Google Drive API"],
+      image: "https://images.unsplash.com/vector-1750426137612-ec4bc0950c5a?q=80&w=3254&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
-    {
-      title: "Modern CSS Grid Techniques",
-      excerpt: "Explore advanced CSS Grid layouts and how they can revolutionize your web design workflow. Practical examples and real-world use cases included.",
-      date: "February 28, 2024",
-      readTime: "6 min read",
-      tags: ["CSS", "Grid", "Layout"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=400&h=250&fit=crop"
-    },
-    {
-      title: "TypeScript for JavaScript Developers",
-      excerpt: "A comprehensive guide to adopting TypeScript in your JavaScript projects. Learn how to migrate existing code and leverage TypeScript's powerful type system.",
-      date: "February 10, 2024",
-      readTime: "12 min read",
-      tags: ["TypeScript", "JavaScript", "Development"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=250&fit=crop"
-    },
-    {
-      title: "Optimizing Web Performance",
-      excerpt: "Discover techniques to improve your website's loading speed and overall performance. From image optimization to code splitting strategies.",
-      date: "January 22, 2024",
-      readTime: "10 min read",
-      tags: ["Performance", "Optimization", "Web Development"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=250&fit=crop"
-    }
+
   ];
 
   return (
@@ -59,20 +36,20 @@ const Articles = () => {
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all duration-300"></div>
               </div>
-              
+
               <div className="p-6">
                 <div className="flex items-center text-sm text-gray-500 mb-3">
                   <span>{article.date}</span>
                   <span className="mx-2">•</span>
                   <span>{article.readTime}</span>
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-200">
                   {article.title}
                 </h3>
-                
+
                 <p className="text-gray-600 mb-4 leading-relaxed">{article.excerpt}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.tags.map((tag, tagIndex) => (
                     <span
