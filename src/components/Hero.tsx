@@ -1,20 +1,20 @@
+import React from 'react';
 
 const Hero = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-black pt-16 relative overflow-hidden">
+    <section id="about" className="min-h-screen flex flex-col items-center justify-center bg-black pt-16 relative overflow-hidden">
       {/* Floating Profile Photo */}
-      <div className="absolute top-1/2 right-10 transform -translate-y-1/2 hidden lg:block">
-        <div className="relative">
-          <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-400/30 shadow-2xl animate-float">
-            <img
-              src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=400&h=400&fit=crop&crop=face"
-              alt="Midhun Prahash"
-              className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-            />
-          </div>
-          {/* Floating animation glow effect */}
-          <div className="absolute inset-0 rounded-full bg-blue-400/10 animate-pulse"></div>
+      {/* Changed positioning from 'absolute top-1/2 right-10' to 'relative mb-8' and removed hidden lg:block */}
+      <div className="relative mb-8"> {/* mb-8 adds space below the image */}
+        <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-400/30 shadow-2xl animate-float">
+          <img
+            src="https://images.unsplash.com/vector-1750443387842-fbb02f1130cf?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Midhun Prahash"
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-400"
+          />
         </div>
+        {/* Floating animation glow effect */}
+        <div className="absolute inset-0 rounded-full bg-blue-300/10 animate-pulse"></div>
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
