@@ -2,33 +2,21 @@
 const Experience = () => {
   const experiences = [
     {
-      title: "Intern",
+      title: "Training Intern",
       company: "Orion Governance",
       period: "Jun - Jul,2025",
       description: "Led development of multiple React applications, mentored junior developers, and implemented modern CI/CD practices. Improved application performance by 40% and reduced load times significantly.",
       skills: ["Python", "Fuzzy String matching", "Python in Excel", "Seaborne"]
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations LLC",
-      period: "2020 - 2022",
-      description: "Developed and maintained full-stack web applications using modern technologies. Collaborated with design teams to create user-friendly interfaces and optimize user experience.",
-      skills: ["Vue.js", "Node.js", "MongoDB", "AWS"]
-    },
-    {
-      title: "Frontend Developer",
-      company: "StartupXYZ",
-      period: "2019 - 2020",
-      description: "Built responsive web applications from scratch, implemented responsive design principles, and worked closely with UX/UI designers to deliver pixel-perfect implementations.",
-      skills: ["JavaScript", "React", "CSS3", "HTML5"]
-    },
-    {
-      title: "Junior Developer",
-      company: "WebDev Agency",
-      period: "2018 - 2019",
-      description: "Started my professional journey by working on various client projects, learning best practices, and contributing to team projects while developing my technical skills.",
-      skills: ["HTML", "CSS", "JavaScript", "jQuery"]
+      title: "Project Intern",
+      company: "AI & Robotics Lab, Excel Group of Schools",
+      period: "Nov - Dec,2024",
+      description: "Led development of multiple React applications, mentored junior developers, and implemented modern CI/CD practices. Improved application performance by 40% and reduced load times significantly.",
+      skills: ["Python", "Fuzzy String matching", "Python in Excel", "Seaborne"]
     }
+
+
   ];
 
   return (

@@ -5,34 +5,11 @@ const Projects = () => {
       title: "Username Matcher",
       description: "This project explores the feasibility of matching usernames to their corresponding employees using traditional fuzzy string matching techniques. While it may not serve a direct practical purpose, it demonstrates how accurate results can be achieved through classic string similarity algorithms.",
       tech: ["Fuzzy", "NLP", "RF-Classifier"],
-      image: "https://images.unsplash.com/vector-1750420590703-b8f9338291bc?q=80&w=3254&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "https://images.unsplash.com/vector-1750424980051-6adaf73023fc?q=80&w=2654&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "https://username-matcher.onrender.com",
       github: "https://github.com/midhunprahash-ui/Username_matcher.git"
-    },
-    {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      tech: ["Vue.js", "Firebase", "Tailwind CSS"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "A comprehensive analytics dashboard with interactive charts, real-time data visualization, and customizable reporting features.",
-      tech: ["React", "D3.js", "Express", "MongoDB"],
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=500&h=300&fit=crop",
-      link: "#",
-      github: "#"
-    },
-    {
-      title: "Mobile Banking App",
-      description: "A secure mobile banking application with biometric authentication, transaction history, and budget tracking capabilities.",
-      tech: ["React Native", "Redux", "Node.js"],
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop",
-      link: "#",
-      github: "#"
     }
+
   ];
 
   return (
