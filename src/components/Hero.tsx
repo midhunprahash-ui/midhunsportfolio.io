@@ -8,7 +8,7 @@ const Hero = () => {
       <div className="relative mb-8"> {/* mb-8 adds space below the image */}
         <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-400/30 shadow-2xl animate-float">
           <img
-            src="https://images.unsplash.com/vector-1750443387842-fbb02f1130cf?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="https://images.unsplash.com/vector-1750444037899-2e1050c9a4ac?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Midhun Prahash"
             className="w-full h-full object-cover hover:scale-105 transition-transform duration-400"
           />
