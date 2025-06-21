@@ -13,7 +13,7 @@ const Projects = () => {
       title: "StudentAi - (RAG & LLM)",
       description: "Developed an AI-powered educational assistant using Retrieval-Augmented Generation (RAG) to extract key concept from school textbooks and generate Why? What? How? explanations for easier student learning. Implemented FAISS vector database for efficient document chunk storage and similarity search, enabling fast and accurate content retrieval.Integrated LangChain framework to orchestrate the RAG pipeline and used OpenAI GPT APIs for generating natural language explanations, improving student engagement and comprehension. Built the web interface using Streamlit, delivering an interactive app that personalizes answers based on student queries. ",
       tech: ["FAISS", "NLP", "Vector DB", "OpenAI API"],
-      image: "https://images.unsplash.com/vector-1750424980051-6adaf73023fc?q=80&w=2654&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "",
       github: "https://github.com/midhunprahash-ui/Student.Ai.git"
     },
     {
@@ -29,7 +29,7 @@ const Projects = () => {
     <section id="projects" className="py-20 bg-black">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">My Projects</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">MyProjects</h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             A showcase of my recent work and personal projects that demonstrate my skills and passion for development.
           </p>
