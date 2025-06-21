@@ -37,7 +37,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="font-medium">Location</p>
-                  <p className="text-gray-300">Chennai,</p>
+                  <p className="text-gray-300">Chennai</p>
                 </div>
               </div>
 
