@@ -5,7 +5,7 @@ const Experience = () => {
       title: "Training Intern",
       company: "Orion Governance",
       period: "Jun - Jul,2025",
-      description: "Led development of multiple React applications, mentored junior developers, and implemented modern CI/CD practices. Improved application performance by 40% and reduced load times significantly.",
+      description: "",
       skills: ["Python", "Fuzzy String matching", "Python in Excel", "Seaborne"]
     },
     {
@@ -13,7 +13,7 @@ const Experience = () => {
       company: "AI & Robotics Lab, Excel Group of Schools",
       period: "Nov - Dec,2024",
       description: "Designed and demonstrated a humanoid robot integrated with the ChatGPT API, enabling real-time human interaction and dynamic query resolution using advanced NLP techniques.",
-      skills: ["NLP", "Python","Rasberry Pi","OpenCV"]
+      skills: ["NLP", "Python", "Rasberry Pi", "OpenCV"]
     }
   ];
 
