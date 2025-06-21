@@ -26,8 +26,8 @@ const Hero = () => {
             </span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            A passionate developer creating digital experiences that make a difference.
-            I specialize in building modern web applications with clean code and beautiful design.
+            I like training and partnering with machines to solve the majorly faced challenges, which in turn revolutionize industries,
+            enhance efficiency, and drive innovation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
