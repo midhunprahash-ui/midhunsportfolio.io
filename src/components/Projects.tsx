@@ -20,7 +20,7 @@ const Projects = () => {
       title: "Ai Integrated Smart Mirror- (COMPUTER VISION)",
       description: "Designed and developed an AI-powered smart mirror using YOLO v8 object detection to track real-time hair density Leveraged computer vision techniques to provide monthly hair density insights , enhancing user engagement in wellness. Applied Python, OpenCV, and YOLO v8, achieving high accuracy in real-time detection with optimized performance. ",
       tech: ["OpenCV", "CNN", "YOLOV8", "Detectron", "Semantic Segmentation"],
-      image: "https://images.unsplash.com/vector-1750424980051-6adaf73023fc?q=80&w=2654&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image: "",
       github: "https://github.com/midhunprahash-ui/Hair_volume_analyzer.git"
     }
   ];
