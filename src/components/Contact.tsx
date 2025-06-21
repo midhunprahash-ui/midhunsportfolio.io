@@ -75,7 +75,7 @@ const Contact = () => {
 
         <div className="text-center mt-16 pt-8 border-t border-gray-800">
           <p className="text-gray-400">
-            © 2025 Midhun Prahash. All rights reserved.
+            © Midhun Prahash. All rights reserved.
           </p>
         </div>
       </div>
