@@ -21,7 +21,7 @@ const Hero = () => {
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
             Hi, I'm{' '}
-            <span className="text-blue-400">
+            <span className="text-blue-500">
               Midhun
             </span>
           </h1>
