@@ -1,47 +1,157 @@
-import React from 'react';
+
+import React, { useState, useEffect } from 'react';
+import { Terminal, Code, Coffee } from 'lucide-react';
 
 const Hero = () => {
+  const [currentCommand, setCurrentCommand] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [showCursor, setShowCursor] = useState(true);
+
+  const commands = [
+    'const developer = "Midhun Prahash";',
+    'console.log("AI & ML Enthusiast");',
+    'npm install --global problem-solver',
+    'git commit -m "Building the future"'
+  ];
+
+  useEffect(() => {
+    const typeCommand = () => {
+      const command = commands[currentCommand];
+      let i = 0;
+      const timer = setInterval(() => {
+        setDisplayText(command.slice(0, i));
+        i++;
+        if (i > command.length) {
+          clearInterval(timer);
+          setTimeout(() => {
+            setCurrentCommand((prev) => (prev + 1) % commands.length);
+          }, 2000);
+        }
+      }, 100);
+    };
+
+    typeCommand();
+  }, [currentCommand]);
+
+  useEffect(() => {
+    const cursorTimer = setInterval(() => {
+      setShowCursor(prev => !prev);
+    }, 500);
+    return () => clearInterval(cursorTimer);
+  }, []);
+
   return (
-    <section id="about" className="min-h-screen flex flex-col items-center justify-center bg-black pt-16 relative overflow-hidden">
-      {/* Floating Profile Photo */}
-      {/* Changed positioning from 'absolute top-1/2 right-10' to 'relative mb-8' and removed hidden lg:block */}
-      <div className="relative mb-8"> {/* mb-8 adds space below the image */}
-        <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-blue-400/30 shadow-2xl animate-float">
-          <img
-            src="https://images.unsplash.com/vector-1750444037899-2e1050c9a4ac?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Midhun Prahash"
-            className="w-full h-full object-cover hover:scale-105 transition-transform duration-400"
-          />
+    <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900 pt-16 relative overflow-hidden">
+      {/* Binary background pattern */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-10 left-10 text-green-400 font-mono text-xs">
+          {Array.from({ length: 50 }, (_, i) => (
+            <div key={i} className="animate-pulse" style={{ animationDelay: `${i * 0.1}s` }}>
+              {Math.random() > 0.5 ? '1' : '0'}
+            </div>
+          ))}
         </div>
-        {/* Floating animation glow effect */}
-        <div className="absolute inset-0 rounded-full bg-blue-300/10 animate-pulse"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="animate-fade-in">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6">
-            Hi, I'm{' '}
-            <span className="text-blue-500">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left side - Terminal */}
+          <div className="space-y-8">
+            {/* Terminal Window */}
+            <div className="bg-black border border-gray-700 rounded-lg shadow-2xl">
+              <div className="flex items-center px-4 py-2 bg-gray-800 rounded-t-lg">
+                <div className="flex space-x-2">
+                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                </div>
+                <div className="flex-1 text-center text-gray-400 text-sm font-mono">
+                  midhun@portfolio:~$
+                </div>
+              </div>
+              <div className="p-6 text-green-400 font-mono text-lg">
+                <div className="mb-2 text-gray-500">$ whoami</div>
+                <div className="mb-4 text-blue-400">Midhun Prahash SR</div>
+                <div className="mb-2 text-gray-500">$ cat skills.txt</div>
+                <div className="mb-4 text-yellow-400">
+                  AI/ML Engineer | Python Developer | Computer Vision
+                </div>
+                <div className="mb-2 text-gray-500">$ run_current_project.py</div>
+                <div className="text-green-400">
+                  {displayText}
+                  <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Code snippet preview */}
+            <div className="bg-gray-800 border border-gray-600 rounded-lg p-4">
+              <div className="flex items-center mb-3">
+                <Code className="w-4 h-4 text-blue-400 mr-2" />
+                <span className="text-gray-300 text-sm font-mono">current_focus.py</span>
+              </div>
+              <pre className="text-sm text-gray-300 font-mono leading-relaxed">
+                <span className="text-purple-400">def</span>{' '}
+                <span className="text-blue-400">solve_problems</span>():
+                {'\n'}    <span className="text-green-400"># Building AI solutions</span>
+                {'\n'}    <span className="text-orange-400">return</span>{' '}
+                <span className="text-yellow-400">"Innovation"</span>
+              </pre>
+            </div>
+          </div>
+
+          {/* Right side - Profile */}
+          <div className="text-center lg:text-left">
+            <div className="relative mb-8 inline-block">
+              <div className="w-72 h-72 rounded-2xl overflow-hidden border-4 border-green-400 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
+                <img
+                  src="https://images.unsplash.com/vector-1750444037899-2e1050c9a4ac?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  alt="Midhun Prahash"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute -top-4 -right-4 bg-green-400 text-black p-2 rounded-full animate-bounce">
+                <Coffee className="w-6 h-6" />
+              </div>
+            </div>
+
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 font-mono">
+              <span className="text-green-400">&lt;</span>
               Midhun
-            </span>
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            I like training and partnering with machines to solve the majorly faced challenges, which in turn revolutionize industries,
-            enhance efficiency, and drive innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-white text-black rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 font-medium"
-            >
-              View My Work
-            </button>
-            <button
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border-2 border-gray-600 text-white rounded-lg hover:border-gray-400 hover:bg-gray-900 transition-all duration-300"
-            >
-              Get In Touch
-            </button>
+              <span className="text-green-400">/&gt;</span>
+            </h1>
+
+            <div className="space-y-4 mb-8">
+              <div className="text-xl text-gray-300 font-mono">
+                <span className="text-blue-400">class</span>{' '}
+                <span className="text-yellow-400">Developer</span>:
+              </div>
+              <div className="text-lg text-gray-400 ml-4 font-mono">
+                specialization = <span className="text-green-400">"AI & ML"</span>
+              </div>
+              <div className="text-lg text-gray-400 ml-4 font-mono">
+                passion = <span className="text-green-400">"Problem Solving"</span>
+              </div>
+              <div className="text-lg text-gray-400 ml-4 font-mono">
+                mission = <span className="text-green-400">"Innovate with AI"</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button
+                onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3 bg-green-400 text-black rounded-lg hover:bg-green-300 transition-all duration-300 transform hover:scale-105 font-mono font-bold flex items-center justify-center"
+              >
+                <Terminal className="w-5 h-5 mr-2" />
+                ./view_projects.sh
+              </button>
+              <button
+                onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
+                className="px-8 py-3 border-2 border-green-400 text-green-400 rounded-lg hover:bg-green-400 hover:text-black transition-all duration-300 font-mono font-bold"
+              >
+                git clone contact
+              </button>
+            </div>
           </div>
         </div>
       </div>
