@@ -8,7 +8,7 @@ const Hero = () => {
 
   const commands = [
     'Developer: Midhun Prahash',
-    'Specialization: AI & ML',
+    'Specialization: ML,RAG,NLP,RPA',
     'Status: Building Solutions',
     'Mission: Innovation'
   ];
@@ -73,7 +73,7 @@ const Hero = () => {
                 <div className="mb-4 text-blue-400">Midhun Prahash SR</div>
                 <div className="mb-2 text-gray-500">$ cat about.txt</div>
                 <div className="mb-4 text-yellow-400">
-                  AI/ML Engineer | Python Developer | Computer Vision
+                  AI/ML Enthusiast | Python Developer | CV | RAG | ML | RPA
                 </div>
                 <div className="mb-2 text-gray-500">$ echo status</div>
                 <div className="text-green-400">
@@ -91,7 +91,7 @@ const Hero = () => {
               </div>
               <pre className="text-sm text-gray-300 font-mono leading-relaxed">
                 <span className="text-purple-400">name</span> = <span className="text-yellow-400">"Midhun Prahash"</span>
-                {'\n'}<span className="text-purple-400">role</span> = <span className="text-yellow-400">"AI Developer"</span>
+                {'\n'}<span className="text-purple-400">role</span> = <span className="text-yellow-400">"Developer. Problem solver. Solution builder"</span>
                 {'\n'}<span className="text-purple-400">passion</span> = <span className="text-yellow-400">"Innovation"</span>
               </pre>
             </div>
@@ -100,10 +100,10 @@ const Hero = () => {
           {/* Right side - Profile */}
           <div className="text-center lg:text-left">
             <div className="relative mb-8 inline-block">
-              <div className="w-64 h-64 overflow-hidden border-4 border-green-400 shadow-2xl animate-float hover:scale-105 transition-transform duration-300" 
-                   style={{ 
-                     clipPath: 'polygon(63% 14%, 89% 35%, 82% 63%, 77% 82%, 39% 94%, 13% 78%, 8% 50%, 25% 28%, 45% 8%)'
-                   }}>
+              <div className="w-64 h-64 overflow-hidden border-4 border-green-400 shadow-2xl animate-float hover:scale-105 transition-transform duration-300"
+                style={{
+                  clipPath: 'polygon(63% 14%, 89% 35%, 82% 63%, 77% 82%, 39% 94%, 13% 78%, 8% 50%, 25% 28%, 45% 8%)'
+                }}>
                 <img
                   src="https://images.unsplash.com/vector-1750444037899-2e1050c9a4ac?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Midhun Prahash"
