@@ -101,11 +101,11 @@ const Hero = () => {
           {/* Right side - Profile */}
           <div className="text-center lg:text-left">
             <div className="relative mb-8 inline-block">
-              <div className="w-72 h-72 rounded-2xl overflow-hidden border-4 border-green-400 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-300">
+              <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-green-400 shadow-2xl animate-float hover:scale-105 transition-transform duration-300">
                 <img
                   src="https://images.unsplash.com/vector-1750444037899-2e1050c9a4ac?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Midhun Prahash"
-                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -top-4 -right-4 bg-green-400 text-black p-2 rounded-full animate-bounce">
