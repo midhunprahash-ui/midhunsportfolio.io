@@ -101,7 +101,10 @@ const Hero = () => {
           {/* Right side - Profile */}
           <div className="text-center lg:text-left">
             <div className="relative mb-8 inline-block">
-              <div className="w-64 h-64 rounded-full overflow-hidden border-4 border-green-400 shadow-2xl animate-float hover:scale-105 transition-transform duration-300">
+              <div className="w-64 h-64 overflow-hidden border-4 border-green-400 shadow-2xl animate-float hover:scale-105 transition-transform duration-300" 
+                   style={{ 
+                     clipPath: 'polygon(30% 0%, 70% 0%, 100% 25%, 100% 75%, 70% 100%, 30% 100%, 0% 75%, 0% 25%)'
+                   }}>
                 <img
                   src="https://images.unsplash.com/vector-1750444037899-2e1050c9a4ac?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Midhun Prahash"
