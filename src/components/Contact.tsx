@@ -78,10 +78,10 @@ const Contact = () => {
                 <div className="pt-4 border-t border-gray-700">
                   <p className="text-gray-400 text-sm mb-4">Connect with me:</p>
                   <div className="space-y-3">
-                    <a 
-                      href="https://www.linkedin.com/in/midhun-prahash-14ab24292/" 
+                    <a
+                      href="https://www.linkedin.com/in/midhun-prahash-14ab24292/"
                       className="flex items-center text-green-400 hover:text-green-300 transition-colors"
-                      target="_blank" 
+                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       <div className="w-8 h-8 bg-gray-800 border border-gray-600 rounded flex items-center justify-center mr-3 hover:bg-green-400 hover:text-black transition-colors">
@@ -92,16 +92,16 @@ const Contact = () => {
                       LinkedIn Profile
                     </a>
 
-                    <a 
-                      href="https://github.com/midhunprahash-ui" 
+                    <a
+                      href="https://github.com/midhunprahash-ui"
                       className="flex items-center text-green-400 hover:text-green-300 transition-colors"
-                      target="_blank" 
+                      target="_blank"
                       rel="noopener noreferrer"
                     >
                       <div className="w-8 h-8 bg-gray-800 border border-gray-600 rounded flex items-center justify-center mr-3 hover:bg-green-400 hover:text-black transition-colors">
                         <Github className="w-4 h-4" />
                       </div>
-                      GitHub Repositories
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -112,7 +112,7 @@ const Contact = () => {
 
         <div className="text-center mt-16 pt-8 border-t border-gray-800">
           <p className="text-gray-400">
-            © 2024 Midhun Prahash. Built with React & TypeScript
+            © 2025 Midhun Prahash. All Rights Reserved
           </p>
         </div>
       </div>

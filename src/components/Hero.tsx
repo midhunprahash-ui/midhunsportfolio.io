@@ -123,13 +123,13 @@ const Hero = () => {
 
             <div className="space-y-4 mb-8">
               <div className="text-xl text-gray-300">
-                <span className="text-green-400">AI & ML Engineer</span>
+                <span className="text-green-400">Learning ML</span>
               </div>
               <div className="text-lg text-gray-400">
-                Specializing in Computer Vision & Python Development
+                I like training and partnering with machines to solve the majorly faced challenges, which in turn revolutionize industries, enhance efficiency, and drive innovation.
               </div>
               <div className="text-lg text-gray-400">
-                Building innovative solutions with artificial intelligence
+                Building innovative solutions with artificial intelligence & Machine Learning.
               </div>
             </div>
 
