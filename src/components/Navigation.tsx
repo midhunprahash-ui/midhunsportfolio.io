@@ -1,16 +1,16 @@
 
 import { useState } from 'react';
-import { Terminal, Code } from 'lucide-react';
+import { Terminal, Menu } from 'lucide-react';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { href: '#about', label: 'about()' },
-    { href: '#projects', label: 'projects[]' },
-    { href: '#experience', label: 'experience' },
-    { href: '#articles', label: 'articles' },
-    { href: '#contact', label: 'contact()' },
+    { href: '#about', label: 'About' },
+    { href: '#projects', label: 'Projects' },
+    { href: '#experience', label: 'Experience' },
+    { href: '#articles', label: 'Articles' },
+    { href: '#contact', label: 'Contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -29,7 +29,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Terminal className="w-6 h-6 text-green-400 mr-2" />
             <span className="text-xl font-bold text-white font-mono">
-              <span className="text-green-400">~/</span>midhun
+              Midhun
               <span className="text-green-400 animate-pulse">_</span>
             </span>
           </div>
@@ -40,9 +40,8 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="px-4 py-2 text-gray-300 hover:text-green-400 hover:bg-gray-800 rounded transition-all duration-200 font-mono text-sm relative group"
+                className="px-4 py-2 text-gray-300 hover:text-green-400 hover:bg-gray-800 rounded transition-all duration-200 font-mono text-sm"
               >
-                <span className="text-green-400 opacity-0 group-hover:opacity-100 transition-opacity">$</span>{' '}
                 {item.label}
               </button>
             ))}
@@ -54,7 +53,7 @@ const Navigation = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-300 hover:text-green-400 p-2"
             >
-              <Code size={24} />
+              <Menu size={24} />
             </button>
           </div>
         </div>
@@ -69,7 +68,7 @@ const Navigation = () => {
                   onClick={() => scrollToSection(item.href)}
                   className="block w-full text-left px-3 py-2 text-gray-300 hover:text-green-400 hover:bg-gray-800 transition-colors duration-200 font-mono text-sm"
                 >
-                  <span className="text-green-400">$</span> {item.label}
+                  {item.label}
                 </button>
               ))}
             </div>

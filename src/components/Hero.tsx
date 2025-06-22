@@ -8,10 +8,10 @@ const Hero = () => {
   const [showCursor, setShowCursor] = useState(true);
 
   const commands = [
-    'const developer = "Midhun Prahash";',
-    'console.log("AI & ML Enthusiast");',
-    'npm install --global problem-solver',
-    'git commit -m "Building the future"'
+    'Developer: Midhun Prahash',
+    'Specialization: AI & ML',
+    'Status: Building Solutions',
+    'Mission: Innovation'
   ];
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const Hero = () => {
 
   return (
     <section id="about" className="min-h-screen flex items-center justify-center bg-gray-900 pt-16 relative overflow-hidden">
-      {/* Binary background pattern */}
+      {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-10 left-10 text-green-400 font-mono text-xs">
           {Array.from({ length: 50 }, (_, i) => (
@@ -66,17 +66,17 @@ const Hero = () => {
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
                 <div className="flex-1 text-center text-gray-400 text-sm font-mono">
-                  midhun@portfolio:~$
+                  terminal
                 </div>
               </div>
               <div className="p-6 text-green-400 font-mono text-lg">
                 <div className="mb-2 text-gray-500">$ whoami</div>
                 <div className="mb-4 text-blue-400">Midhun Prahash SR</div>
-                <div className="mb-2 text-gray-500">$ cat skills.txt</div>
+                <div className="mb-2 text-gray-500">$ cat about.txt</div>
                 <div className="mb-4 text-yellow-400">
                   AI/ML Engineer | Python Developer | Computer Vision
                 </div>
-                <div className="mb-2 text-gray-500">$ run_current_project.py</div>
+                <div className="mb-2 text-gray-500">$ echo status</div>
                 <div className="text-green-400">
                   {displayText}
                   <span className={`${showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}>|</span>
@@ -84,18 +84,16 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Code snippet preview */}
+            {/* Simple code preview */}
             <div className="bg-gray-800 border border-gray-600 rounded-lg p-4">
               <div className="flex items-center mb-3">
                 <Code className="w-4 h-4 text-blue-400 mr-2" />
-                <span className="text-gray-300 text-sm font-mono">current_focus.py</span>
+                <span className="text-gray-300 text-sm font-mono">about.py</span>
               </div>
               <pre className="text-sm text-gray-300 font-mono leading-relaxed">
-                <span className="text-purple-400">def</span>{' '}
-                <span className="text-blue-400">solve_problems</span>():
-                {'\n'}    <span className="text-green-400"># Building AI solutions</span>
-                {'\n'}    <span className="text-orange-400">return</span>{' '}
-                <span className="text-yellow-400">"Innovation"</span>
+                <span className="text-purple-400">name</span> = <span className="text-yellow-400">"Midhun Prahash"</span>
+                {'\n'}<span className="text-purple-400">role</span> = <span className="text-yellow-400">"AI Developer"</span>
+                {'\n'}<span className="text-purple-400">passion</span> = <span className="text-yellow-400">"Innovation"</span>
               </pre>
             </div>
           </div>
@@ -122,18 +120,14 @@ const Hero = () => {
             </h1>
 
             <div className="space-y-4 mb-8">
-              <div className="text-xl text-gray-300 font-mono">
-                <span className="text-blue-400">class</span>{' '}
-                <span className="text-yellow-400">Developer</span>:
+              <div className="text-xl text-gray-300">
+                <span className="text-green-400">AI & ML Engineer</span>
               </div>
-              <div className="text-lg text-gray-400 ml-4 font-mono">
-                specialization = <span className="text-green-400">"AI & ML"</span>
+              <div className="text-lg text-gray-400">
+                Specializing in Computer Vision & Python Development
               </div>
-              <div className="text-lg text-gray-400 ml-4 font-mono">
-                passion = <span className="text-green-400">"Problem Solving"</span>
-              </div>
-              <div className="text-lg text-gray-400 ml-4 font-mono">
-                mission = <span className="text-green-400">"Innovate with AI"</span>
+              <div className="text-lg text-gray-400">
+                Building innovative solutions with artificial intelligence
               </div>
             </div>
 
@@ -143,13 +137,13 @@ const Hero = () => {
                 className="px-8 py-3 bg-green-400 text-black rounded-lg hover:bg-green-300 transition-all duration-300 transform hover:scale-105 font-mono font-bold flex items-center justify-center"
               >
                 <Terminal className="w-5 h-5 mr-2" />
-                ./view_projects.sh
+                View Projects
               </button>
               <button
                 onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
                 className="px-8 py-3 border-2 border-green-400 text-green-400 rounded-lg hover:bg-green-400 hover:text-black transition-all duration-300 font-mono font-bold"
               >
-                git clone contact
+                Get In Touch
               </button>
             </div>
           </div>

@@ -11,7 +11,7 @@ const Projects = () => {
       image: "https://images.unsplash.com/vector-1750424980051-6adaf73023fc?q=80&w=2654&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "https://username-matcher.onrender.com",
       github: "https://github.com/midhunprahash-ui/Username_matcher.git",
-      status: "production"
+      status: "live"
     },
     {
       title: "StudentAi - RAG & LLM",
@@ -33,7 +33,7 @@ const Projects = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'production': return 'bg-green-500/20 text-green-400 border-green-500/30';
+      case 'live': return 'bg-green-500/20 text-green-400 border-green-500/30';
       case 'development': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
       case 'beta': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
       default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
@@ -42,27 +42,16 @@ const Projects = () => {
 
   return (
     <section id="projects" className="py-20 bg-gray-900 relative">
-      {/* Code pattern background */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="text-green-400 font-mono text-xs leading-relaxed">
-          {Array.from({ length: 20 }, (_, i) => (
-            <div key={i} className="mb-2">
-              {`// Project ${i + 1}: Building innovative solutions`}
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center mb-4">
             <Code className="w-8 h-8 text-green-400 mr-3" />
             <h2 className="text-4xl md:text-5xl font-bold text-white font-mono">
-              <span className="text-green-400">const</span> projects = [
+              Projects
             </h2>
           </div>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto font-mono">
-            <span className="text-blue-400">//</span> A collection of AI/ML projects showcasing innovation
+          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+            A collection of AI/ML projects showcasing innovation
           </p>
         </div>
 
@@ -72,7 +61,7 @@ const Projects = () => {
               key={index}
               className="group bg-black border border-gray-700 rounded-xl hover:border-green-400 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
             >
-              {/* Terminal header */}
+              {/* Header */}
               <div className="flex items-center px-4 py-2 bg-gray-800 border-b border-gray-700">
                 <div className="flex space-x-2">
                   <div className="w-2 h-2 bg-red-500 rounded-full"></div>
@@ -80,7 +69,7 @@ const Projects = () => {
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 </div>
                 <div className="flex-1 text-center text-gray-400 text-xs font-mono">
-                  {project.title.toLowerCase().replace(/\s+/g, '_')}.py
+                  {project.title}
                 </div>
                 <div className={`px-2 py-1 rounded text-xs font-mono border ${getStatusColor(project.status)}`}>
                   {project.status}
@@ -97,7 +86,7 @@ const Projects = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 font-mono group-hover:text-green-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
                   {project.title}
                 </h3>
                 <p className="text-gray-300 mb-4 leading-relaxed text-sm">{project.description}</p>
@@ -117,33 +106,27 @@ const Projects = () => {
                   {project.link && (
                     <a
                       href={project.link}
-                      className="flex items-center text-green-400 hover:text-green-300 font-mono text-sm transition-colors"
+                      className="flex items-center text-green-400 hover:text-green-300 text-sm transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Monitor className="w-4 h-4 mr-1" />
-                      demo
+                      Live Demo
                     </a>
                   )}
                   <a
                     href={project.github}
-                    className="flex items-center text-gray-300 hover:text-white font-mono text-sm transition-colors"
+                    className="flex items-center text-gray-300 hover:text-white text-sm transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Github className="w-4 h-4 mr-1" />
-                    source
+                    Source Code
                   </a>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-gray-400 font-mono">
-            <span className="text-green-400">];</span> // End of projects array
-          </p>
         </div>
       </div>
     </section>
