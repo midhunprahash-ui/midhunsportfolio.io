@@ -29,7 +29,7 @@ const Navigation = () => {
           <div className="flex items-center">
             <Terminal className="w-6 h-6 text-green-400 mr-2" />
             <span className="text-xl font-bold text-white font-mono">
-              Midhun
+              Midhun's portfolio
               <span className="text-green-400 animate-pulse">_</span>
             </span>
           </div>
