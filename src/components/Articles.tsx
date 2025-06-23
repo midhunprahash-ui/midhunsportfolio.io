@@ -8,7 +8,7 @@ const Articles = () => {
       title: "Fetching Files from Google Drive using Google Drive API",
       excerpt: "A comprehensive tutorial on implementing Google Drive API integration for file management. Learn authentication, API setup, and best practices for efficient file operations.",
       date: "2025-06-20",
-      readTime: "5 min",
+      readTime: "3 min",
       tags: ["Python", "API", "Google Drive", "Authentication"],
       image: "https://images.unsplash.com/vector-1750426137612-ec4bc0950c5a?q=80&w=3254&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       url: "https://medium.com/@midhuntech2023/tutorial-to-fetch-files-from-google-drive-using-google-drive-api-38765a55981d",

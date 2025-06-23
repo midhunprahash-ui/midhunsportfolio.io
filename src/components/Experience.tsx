@@ -18,7 +18,7 @@ const Experience = () => {
       period: "Nov - Dec, 2024",
       description: "Designed and demonstrated a humanoid robot integrated with ChatGPT API, enabling real-time human interaction and dynamic query resolution using advanced NLP techniques.",
       skills: ["NLP", "Python", "Raspberry Pi", "OpenCV", "API Integration"],
-      type: "project"
+      type: "internship"
     }
   ];
 
@@ -44,10 +44,10 @@ const Experience = () => {
               {index < experiences.length - 1 && (
                 <div className="absolute left-6 top-16 w-0.5 h-24 bg-green-400 opacity-30"></div>
               )}
-              
+
               {/* Timeline node */}
               <div className="absolute left-4 top-8 w-4 h-4 bg-green-400 rounded-full border-4 border-black shadow-lg"></div>
-              
+
               <div className="ml-16">
                 <div className="bg-gray-900 border border-gray-700 rounded-xl p-6 hover:border-green-400 transition-all duration-300">
                   {/* Header */}
