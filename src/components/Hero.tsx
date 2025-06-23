@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Terminal, Code, Coffee } from 'lucide-react';
 
@@ -100,7 +101,7 @@ const Hero = () => {
           {/* Right side - Profile */}
           <div className="text-center lg:text-left">
             <div className="relative mb-8 inline-block">
-              <div className="w-64 h-64 overflow-hidden border-4 border-green-400 shadow-2xl animate-float hover:scale-105 transition-transform duration-300"
+              <div className="w-64 h-64 overflow-hidden border-4 border-green-400 shadow-2xl animate-float hover:scale-105 transition-transform duration-300 rounded-3xl"
                 style={{
                   clipPath: 'polygon(63% 14%, 89% 35%, 82% 63%, 77% 82%, 39% 94%, 13% 78%, 8% 50%, 25% 28%, 45% 8%)'
                 }}>
