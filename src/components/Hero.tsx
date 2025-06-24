@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect } from 'react';
-import { Terminal } from 'lucide-react';
+import { Terminal, Download } from 'lucide-react';
 
 const Hero = () => {
   const [currentCommand, setCurrentCommand] = useState(0);
@@ -39,6 +38,16 @@ const Hero = () => {
     }, 500);
     return () => clearInterval(cursorTimer);
   }, []);
+
+  const handleDownloadResume = () => {
+    // Create a temporary link element to trigger download
+    const link = document.createElement('a');
+    link.href = '/resume.pdf'; // You'll need to add your resume.pdf to the public folder
+    link.download = 'Midhun_Prahash_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="about" className="min-h-screen flex items-center justify-center bg-black pt-14">
@@ -87,6 +96,13 @@ const Hero = () => {
               className="px-8 py-3 bg-amber-100 text-black font-mono text-sm hover:bg-amber-200 transition-colors"
             >
               VIEW_PROJECTS
+            </button>
+            <button
+              onClick={handleDownloadResume}
+              className="px-8 py-3 border border-amber-100 text-amber-100 font-mono text-sm hover:bg-amber-100 hover:text-black transition-colors flex items-center justify-center gap-2"
+            >
+              <Download size={16} />
+              DOWNLOAD_RESUME
             </button>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
