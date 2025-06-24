@@ -27,12 +27,12 @@ const Experience = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
-            <Terminal className="w-6 h-6 text-blue-500 mr-3" />
+            <Terminal className="w-6 h-6 text-amber-100 mr-3" />
             <h2 className="text-2xl font-mono font-bold text-white">
               EXPERIENCE
             </h2>
           </div>
-          <div className="w-16 h-px bg-blue-500 mx-auto"></div>
+          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
         </div>
 
         {/* Timeline */}
@@ -46,16 +46,16 @@ const Experience = () => {
               )}
               
               {/* Timeline dot */}
-              <div className="absolute left-3 top-6 w-2 h-2 bg-blue-500 rounded-full"></div>
+              <div className="absolute left-3 top-6 w-2 h-2 bg-amber-100 rounded-full"></div>
               
               {/* Content */}
               <div className="ml-12">
-                <div className="bg-black border border-gray-900 p-6 hover:border-blue-500 transition-colors">
+                <div className="bg-black border border-gray-900 p-6 hover:border-amber-100 transition-colors">
                   
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">
                     <div className="flex items-center">
-                      <Briefcase className="w-4 h-4 text-blue-500 mr-2" />
+                      <Briefcase className="w-4 h-4 text-amber-100 mr-2" />
                       <span className="text-xs font-mono text-gray-500">INTERNSHIP</span>
                     </div>
                     <span className="text-xs font-mono text-gray-500">{exp.period}</span>
@@ -66,7 +66,7 @@ const Experience = () => {
                     <h3 className="text-lg font-mono font-bold text-white mb-1">
                       {exp.title}
                     </h3>
-                    <p className="text-blue-500 font-mono text-sm">
+                    <p className="text-amber-100 font-mono text-sm">
                       {exp.company}
                     </p>
                   </div>
@@ -81,7 +81,7 @@ const Experience = () => {
                     {exp.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-2 py-1 bg-gray-900 text-blue-500 text-xs font-mono"
+                        className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
                       >
                         {skill}
                       </span>

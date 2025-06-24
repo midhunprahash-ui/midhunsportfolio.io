@@ -35,12 +35,12 @@ const Projects = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
-            <Code className="w-6 h-6 text-blue-500 mr-3" />
+            <Code className="w-6 h-6 text-amber-100 mr-3" />
             <h2 className="text-2xl font-mono font-bold text-white">
               PROJECTS
             </h2>
           </div>
-          <div className="w-16 h-px bg-blue-500 mx-auto"></div>
+          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
         </div>
 
         {/* Projects Grid */}
@@ -48,19 +48,19 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-black border border-gray-900 hover:border-blue-500 transition-all duration-300 group"
+              className="bg-black border border-gray-900 hover:border-amber-100 transition-all duration-300 group"
             >
               {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 border-b border-gray-900">
                 <span className="text-xs font-mono text-gray-500">{project.title}</span>
-                <span className={`text-xs font-mono ${project.status === 'LIVE' ? 'text-blue-500' : 'text-gray-500'}`}>
+                <span className={`text-xs font-mono ${project.status === 'LIVE' ? 'text-amber-100' : 'text-gray-500'}`}>
                   {project.status}
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg font-mono font-bold text-white mb-3 group-hover:text-blue-500 transition-colors">
+                <h3 className="text-lg font-mono font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
                   {project.title}
                 </h3>
                 
@@ -73,7 +73,7 @@ const Projects = () => {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-900 text-blue-500 text-xs font-mono"
+                      className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
                     >
                       {tech}
                     </span>
@@ -85,7 +85,7 @@ const Projects = () => {
                   {project.link && (
                     <a
                       href={project.link}
-                      className="flex items-center text-blue-500 hover:text-blue-400 text-xs font-mono"
+                      className="flex items-center text-amber-100 hover:text-amber-200 text-xs font-mono"
                       target="_blank"
                       rel="noopener noreferrer"
                     >

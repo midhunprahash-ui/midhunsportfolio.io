@@ -3,13 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Minimal Stealth Black Design System - Only Black + Electric Blue */
+/* Minimal Stealth Black Design System - Only Black + Warm White */
 
 @layer base {
   :root {
     --background: 0 0% 0%;
     --foreground: 0 0% 100%;
-    --accent: 210 100% 60%;
+    --accent: 60 56% 91%;
     --muted: 0 0% 10%;
     --border: 0 0% 8%;
     --radius: 0rem;
@@ -44,10 +44,10 @@
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: 0 0 5px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 5px rgba(245, 245, 220, 0.3);
   }
   50% {
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 20px rgba(245, 245, 220, 0.6);
   }
 }
 
@@ -69,5 +69,5 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b82f6;
+  background: #f5f5dc;
 }

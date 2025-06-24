@@ -50,7 +50,7 @@ const Hero = () => {
             <div className="flex space-x-2">
               <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
               <div className="w-2 h-2 bg-gray-600 rounded-full"></div>
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-amber-100 rounded-full"></div>
             </div>
             <div className="flex-1 text-center">
               <span className="text-xs font-mono text-gray-500">terminal</span>
@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="mb-2 text-gray-500">$ whoami</div>
             <div className="mb-4 text-white">midhun_prahash</div>
             <div className="mb-2 text-gray-500">$ echo role</div>
-            <div className="text-blue-500">
+            <div className="text-amber-100">
               {displayText}
               <span className={`${showCursor ? 'opacity-100' : 'opacity-0'}`}>_</span>
             </div>
@@ -73,7 +73,7 @@ const Hero = () => {
             <h1 className="text-4xl md:text-6xl font-mono font-bold text-white mb-4">
               MIDHUN PRAHASH
             </h1>
-            <div className="w-20 h-px bg-blue-500 mx-auto mb-6"></div>
+            <div className="w-20 h-px bg-amber-100 mx-auto mb-6"></div>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
               Building intelligent systems that solve real-world challenges through 
               machine learning, computer vision, and innovative AI solutions.
@@ -84,13 +84,13 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
             <button
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-blue-500 text-black font-mono text-sm hover:bg-blue-400 transition-colors"
+              className="px-8 py-3 bg-amber-100 text-black font-mono text-sm hover:bg-amber-200 transition-colors"
             >
               VIEW_PROJECTS
             </button>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border border-blue-500 text-blue-500 font-mono text-sm hover:bg-blue-500 hover:text-black transition-colors"
+              className="px-8 py-3 border border-amber-100 text-amber-100 font-mono text-sm hover:bg-amber-100 hover:text-black transition-colors"
             >
               CONTACT
             </button>

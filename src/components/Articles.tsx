@@ -21,12 +21,12 @@ const Articles = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
-            <Code className="w-6 h-6 text-blue-500 mr-3" />
+            <Code className="w-6 h-6 text-amber-100 mr-3" />
             <h2 className="text-2xl font-mono font-bold text-white">
               ARTICLES
             </h2>
           </div>
-          <div className="w-16 h-px bg-blue-500 mx-auto"></div>
+          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
         </div>
 
         {/* Articles */}
@@ -39,7 +39,7 @@ const Articles = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <article className="bg-black border border-gray-900 hover:border-blue-500 transition-all duration-300 p-6">
+              <article className="bg-black border border-gray-900 hover:border-amber-100 transition-all duration-300 p-6">
                 
                 {/* Header */}
                 <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">
@@ -48,11 +48,11 @@ const Articles = () => {
                     <span className="mx-2">•</span>
                     <span>{article.readTime}</span>
                   </div>
-                  <span className="text-xs font-mono text-blue-500">PUBLISHED</span>
+                  <span className="text-xs font-mono text-amber-100">PUBLISHED</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-mono font-bold text-white mb-3 group-hover:text-blue-500 transition-colors">
+                <h3 className="text-xl font-mono font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
                   {article.title}
                 </h3>
 
@@ -66,7 +66,7 @@ const Articles = () => {
                   {article.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-2 py-1 bg-gray-900 text-blue-500 text-xs font-mono"
+                      className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
                     >
                       {tag}
                     </span>
@@ -74,7 +74,7 @@ const Articles = () => {
                 </div>
 
                 {/* Read more */}
-                <div className="flex items-center text-blue-500 text-xs font-mono group-hover:text-blue-400 transition-colors">
+                <div className="flex items-center text-amber-100 text-xs font-mono group-hover:text-amber-200 transition-colors">
                   <ExternalLink className="w-3 h-3 mr-2" />
                   <span>READ_ARTICLE</span>
                 </div>

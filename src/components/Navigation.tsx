@@ -27,7 +27,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex items-center">
-            <Terminal className="w-5 h-5 text-blue-500 mr-3" />
+            <Terminal className="w-5 h-5 text-amber-100 mr-3" />
             <span className="text-sm font-mono text-white">
               midhun.dev
             </span>
@@ -39,7 +39,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-xs font-mono text-gray-400 hover:text-blue-500 transition-colors duration-200"
+                className="text-xs font-mono text-gray-400 hover:text-amber-100 transition-colors duration-200"
               >
                 {item.label}
               </button>
@@ -49,7 +49,7 @@ const Navigation = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-400 hover:text-blue-500"
+            className="md:hidden text-gray-400 hover:text-amber-100"
           >
             {isOpen ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -63,7 +63,7 @@ const Navigation = () => {
                 <button
                   key={item.href}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left text-xs font-mono text-gray-400 hover:text-blue-500 py-1"
+                  className="block w-full text-left text-xs font-mono text-gray-400 hover:text-amber-100 py-1"
                 >
                   {item.label}
                 </button>
