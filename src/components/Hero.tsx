@@ -55,8 +55,8 @@ const Hero = () => {
         {/* Main Content */}
         <div className="space-y-8">
           <div>
-            <h1 className="text-3xl md:text-4xl font-mono font-bold text-white mb-4">
-              Hello! I'm Midhun Prahash
+            <h1 className="text-3xl md:text-5xl font-mono font-bold text-white mb-4">
+              Hello! I'm Midhun
             </h1>
             {/* <div className="w-20 h-px bg-amber-100 mx-auto mb-6"></div> */}
             <p className="text-lg text-gray-400 max-w-1xl mx-auto leading-relaxed">
