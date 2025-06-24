@@ -6,122 +6,101 @@ const Projects = () => {
   const projects = [
     {
       title: "Username Matcher",
-      description: "A fuzzy string matching system that demonstrates advanced NLP techniques for employee-username correlation. Built with traditional algorithms achieving high accuracy results.",
+      description: "Fuzzy string matching system for employee-username correlation using advanced NLP techniques and RF-Classifier.",
       tech: ["Python", "Fuzzy Logic", "NLP", "RF-Classifier"],
-      image: "https://images.unsplash.com/vector-1750424980051-6adaf73023fc?q=80&w=2654&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "https://username-matcher.onrender.com",
       github: "https://github.com/midhunprahash-ui/Username_matcher.git",
-      status: "live"
+      status: "LIVE"
     },
     {
       title: "StudentAi - RAG & LLM",
-      description: "AI-powered educational assistant using Retrieval-Augmented Generation. Features FAISS vector database, LangChain framework, and OpenAI GPT APIs for personalized learning.",
-      tech: ["FAISS", "LangChain", "Vector DB", "OpenAI API", "Streamlit"],
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=2532&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      description: "AI-powered educational assistant using Retrieval-Augmented Generation with FAISS vector database and LangChain.",
+      tech: ["FAISS", "LangChain", "Vector DB", "OpenAI API"],
       github: "https://github.com/midhunprahash-ui/Student.Ai.git",
-      status: "development"
+      status: "DEV"
     },
     {
       title: "AI Smart Mirror",
-      description: "Computer vision-powered smart mirror using YOLOv8 for real-time hair density tracking. Provides monthly wellness insights with optimized performance.",
+      description: "Computer vision-powered smart mirror using YOLOv8 for real-time hair density tracking and wellness insights.",
       tech: ["YOLOv8", "OpenCV", "Computer Vision", "Python"],
-      image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       github: "https://github.com/midhunprahash-ui/Hair_volume_analyzer.git",
-      status: "development"
+      status: "DEV"
     }
   ];
 
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'live': return 'bg-green-500/20 text-green-500 border-green-500/30';
-      case 'development': return 'bg-yellow-500/20 text-yellow-500 border-yellow-500/30';
-      case 'beta': return 'bg-blue-500/20 text-blue-500 border-blue-500/30';
-      default: return 'bg-gray-500/20 text-gray-500 border-gray-500/30';
-    }
-  };
-
   return (
-    <section id="projects" className="py-20 bg-black relative">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="projects" className="py-20 bg-black">
+      <div className="max-w-6xl mx-auto px-6">
+        
+        {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center mb-4">
-            <Code className="w-8 h-8 text-green-500 mr-3" />
-            <h2 className="text-4xl md:text-5xl font-bold text-white font-mono">
-              Projects
+          <div className="flex items-center justify-center mb-4">
+            <Code className="w-6 h-6 text-blue-500 mr-3" />
+            <h2 className="text-2xl font-mono font-bold text-white">
+              PROJECTS
             </h2>
           </div>
-          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            A collection of AI/ML projects showcasing innovation
-          </p>
+          <div className="w-16 h-px bg-blue-500 mx-auto"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-gray-950 border border-gray-800 rounded-xl hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+              className="bg-black border border-gray-900 hover:border-blue-500 transition-all duration-300 group"
             >
               {/* Header */}
-              <div className="flex items-center px-4 py-2 bg-gray-900 border-b border-gray-800">
-                <div className="flex space-x-2">
-                  <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-                  <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                </div>
-                <div className="flex-1 text-center text-gray-500 text-xs font-mono">
-                  {project.title}
-                </div>
-                <div className={`px-2 py-1 rounded text-xs font-mono border ${getStatusColor(project.status)}`}>
+              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-900">
+                <span className="text-xs font-mono text-gray-500">{project.title}</span>
+                <span className={`text-xs font-mono ${project.status === 'LIVE' ? 'text-blue-500' : 'text-gray-500'}`}>
                   {project.status}
-                </div>
+                </span>
               </div>
 
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-              </div>
-
+              {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-500 transition-colors">
+                <h3 className="text-lg font-mono font-bold text-white mb-3 group-hover:text-blue-500 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 mb-4 leading-relaxed text-sm">{project.description}</p>
+                
+                <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                  {project.description}
+                </p>
 
-                <div className="flex flex-wrap gap-2 mb-4">
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-900 text-green-500 text-xs rounded border border-gray-700 font-mono"
+                      className="px-2 py-1 bg-gray-900 text-blue-500 text-xs font-mono"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex space-x-3">
+                {/* Links */}
+                <div className="flex space-x-4">
                   {project.link && (
                     <a
                       href={project.link}
-                      className="flex items-center text-green-500 hover:text-green-400 text-sm transition-colors"
+                      className="flex items-center text-blue-500 hover:text-blue-400 text-xs font-mono"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Monitor className="w-4 h-4 mr-1" />
-                      Live Demo
+                      <Monitor className="w-3 h-3 mr-1" />
+                      DEMO
                     </a>
                   )}
                   <a
                     href={project.github}
-                    className="flex items-center text-gray-400 hover:text-white text-sm transition-colors"
+                    className="flex items-center text-gray-400 hover:text-white text-xs font-mono"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="w-4 h-4 mr-1" />
-                    Source Code
+                    <Github className="w-3 h-3 mr-1" />
+                    CODE
                   </a>
                 </div>
               </div>
