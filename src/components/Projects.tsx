@@ -33,24 +33,24 @@ const Projects = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'live': return 'bg-green-500/20 text-green-400 border-green-500/30';
-      case 'development': return 'bg-yellow-500/20 text-yellow-400 border-yellow-500/30';
-      case 'beta': return 'bg-blue-500/20 text-blue-400 border-blue-500/30';
-      default: return 'bg-gray-500/20 text-gray-400 border-gray-500/30';
+      case 'live': return 'bg-green-500/20 text-green-500 border-green-500/30';
+      case 'development': return 'bg-yellow-500/20 text-yellow-500 border-yellow-500/30';
+      case 'beta': return 'bg-blue-500/20 text-blue-500 border-blue-500/30';
+      default: return 'bg-gray-500/20 text-gray-500 border-gray-500/30';
     }
   };
 
   return (
-    <section id="projects" className="py-20 bg-gray-900 relative">
+    <section id="projects" className="py-20 bg-black relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center mb-4">
-            <Code className="w-8 h-8 text-green-400 mr-3" />
+            <Code className="w-8 h-8 text-green-500 mr-3" />
             <h2 className="text-4xl md:text-5xl font-bold text-white font-mono">
               Projects
             </h2>
           </div>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-500 max-w-2xl mx-auto">
             A collection of AI/ML projects showcasing innovation
           </p>
         </div>
@@ -59,16 +59,16 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="group bg-black border border-gray-700 rounded-xl hover:border-green-400 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
+              className="group bg-gray-950 border border-gray-800 rounded-xl hover:border-green-500 transition-all duration-300 transform hover:-translate-y-2 overflow-hidden"
             >
               {/* Header */}
-              <div className="flex items-center px-4 py-2 bg-gray-800 border-b border-gray-700">
+              <div className="flex items-center px-4 py-2 bg-gray-900 border-b border-gray-800">
                 <div className="flex space-x-2">
                   <div className="w-2 h-2 bg-red-500 rounded-full"></div>
                   <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                 </div>
-                <div className="flex-1 text-center text-gray-400 text-xs font-mono">
+                <div className="flex-1 text-center text-gray-500 text-xs font-mono">
                   {project.title}
                 </div>
                 <div className={`px-2 py-1 rounded text-xs font-mono border ${getStatusColor(project.status)}`}>
@@ -86,16 +86,16 @@ const Projects = () => {
               </div>
 
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-500 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-300 mb-4 leading-relaxed text-sm">{project.description}</p>
+                <p className="text-gray-400 mb-4 leading-relaxed text-sm">{project.description}</p>
 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-800 text-green-400 text-xs rounded border border-gray-600 font-mono"
+                      className="px-2 py-1 bg-gray-900 text-green-500 text-xs rounded border border-gray-700 font-mono"
                     >
                       {tech}
                     </span>
@@ -106,7 +106,7 @@ const Projects = () => {
                   {project.link && (
                     <a
                       href={project.link}
-                      className="flex items-center text-green-400 hover:text-green-300 text-sm transition-colors"
+                      className="flex items-center text-green-500 hover:text-green-400 text-sm transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -116,7 +116,7 @@ const Projects = () => {
                   )}
                   <a
                     href={project.github}
-                    className="flex items-center text-gray-300 hover:text-white text-sm transition-colors"
+                    className="flex items-center text-gray-400 hover:text-white text-sm transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
