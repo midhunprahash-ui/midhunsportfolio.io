@@ -42,7 +42,7 @@ const Hero = () => {
   const handleDownloadResume = () => {
     // Create a temporary link element to trigger download
     const link = document.createElement('a');
-    link.href = '/public/Resume_MidhunPrahash.pdf'; // You'll need to add your resume.pdf to the public folder
+    link.href = 'resume.pdf'; // You'll need to add your resume.pdf to the public folder
     link.download = 'Midhun_Prahash_Resume.pdf';
     document.body.appendChild(link);
     link.click();
