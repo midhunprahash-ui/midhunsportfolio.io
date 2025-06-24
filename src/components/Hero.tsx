@@ -42,7 +42,7 @@ const Hero = () => {
   const handleDownloadResume = () => {
     // Create a temporary link element to trigger download
     const link = document.createElement('a');
-    link.href = '/resume.pdf'; // You'll need to add your resume.pdf to the public folder
+    link.href = 'public/Midhun_Prahash_Resume.pdf'; // You'll need to add your resume.pdf to the public folder
     link.download = 'Midhun_Prahash_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -52,7 +52,7 @@ const Hero = () => {
   return (
     <section id="about" className="min-h-screen flex items-center justify-center bg-black pt-14">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        
+
         {/* Terminal Window */}
         <div className="bg-black border border-gray-900 mb-12 animate-fade-in">
           <div className="flex items-center px-4 py-2 border-b border-gray-900">
@@ -84,7 +84,7 @@ const Hero = () => {
             </h1>
             <div className="w-20 h-px bg-amber-100 mx-auto mb-6"></div>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Building intelligent systems that solve real-world challenges through 
+              Building intelligent systems that solve real-world challenges through
               machine learning, computer vision, and innovative AI solutions.
             </p>
           </div>
