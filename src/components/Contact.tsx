@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-black">
       <div className="max-w-4xl mx-auto px-6">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
@@ -21,7 +21,7 @@ const Contact = () => {
         {/* Contact Info */}
         <div className="max-w-2xl mx-auto">
           <div className="bg-black border border-gray-900">
-            
+
             {/* Terminal Header */}
             <div className="flex items-center px-4 py-3 border-b border-gray-900">
               <div className="flex space-x-2">
@@ -36,7 +36,7 @@ const Contact = () => {
 
             {/* Content */}
             <div className="p-6 space-y-6">
-              
+
               {/* Email */}
               <div className="flex items-center">
                 <div className="w-8 h-8 bg-amber-100 flex items-center justify-center mr-4">
@@ -114,7 +114,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t border-gray-900">
           <p className="text-xs font-mono text-gray-500">
-            © 2025 MIDHUN PRAHASH
+            © 2025 Midhun Prahash. All rights reserved.
           </p>
         </div>
       </div>

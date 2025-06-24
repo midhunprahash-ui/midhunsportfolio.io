@@ -7,7 +7,7 @@ const Skills = () => {
     {
       title: "Programming Languages",
       icon: Code2,
-      skills: ["Python", "JavaScript", "TypeScript", "Java", "C++", "SQL"]
+      skills: ["Python", "Java", "SQL"]
     },
     {
       title: "AI & Machine Learning",
@@ -17,19 +17,19 @@ const Skills = () => {
     {
       title: "Frameworks & Libraries",
       icon: Wrench,
-      skills: ["React", "Node.js", "FastAPI", "LangChain", "Streamlit", "Flask"]
+      skills: ["React", "Node.js", "FastAPI", "LangChain", "Django", "Flask"]
     },
     {
       title: "Tools & Technologies",
       icon: Database,
-      skills: ["Git", "Docker", "AWS", "MongoDB", "PostgreSQL", "FAISS"]
+      skills: ["Git", "PostgreSQL", "FAISS"]
     }
   ];
 
   return (
     <section id="skills" className="py-20 bg-black">
       <div className="max-w-6xl mx-auto px-6">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">

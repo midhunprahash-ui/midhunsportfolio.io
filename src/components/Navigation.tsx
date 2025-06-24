@@ -22,14 +22,14 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-gray-900">
+    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-900 backdrop-filter backdrop-blur-md bg-opacity-30 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex items-center">
             <Terminal className="w-5 h-5 text-amber-100 mr-3" />
             <span className="text-sm font-mono text-white">
-              midhun.dev
+              midhun's portfolio_
             </span>
           </div>
 
