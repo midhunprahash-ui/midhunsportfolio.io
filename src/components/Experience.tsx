@@ -23,7 +23,7 @@ const Experience = () => {
   return (
     <section id="experience" className="py-20 bg-black">
       <div className="max-w-4xl mx-auto px-6">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
@@ -39,19 +39,19 @@ const Experience = () => {
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="relative">
-              
+
               {/* Timeline line */}
               {index < experiences.length - 1 && (
                 <div className="absolute left-4 top-8 w-px h-20 bg-gray-900"></div>
               )}
-              
+
               {/* Timeline dot */}
               <div className="absolute left-3 top-6 w-2 h-2 bg-amber-100 rounded-full"></div>
-              
+
               {/* Content */}
               <div className="ml-12">
                 <div className="bg-black border border-gray-900 p-6 hover:border-amber-100 transition-colors">
-                  
+
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">
                     <div className="flex items-center">

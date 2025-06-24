@@ -27,9 +27,9 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex items-center">
-            <Terminal className="w-5 h-5 text-amber-100 mr-3" />
+            {/* <Terminal className="w-5 h-5 text-amber-100 mr-3" /> */}
             <span className="text-sm font-mono text-white">
-              midhun's portfolio_
+              Midhun's Portfolio
             </span>
           </div>
 
