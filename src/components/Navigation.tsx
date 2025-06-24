@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Terminal, Menu, X } from 'lucide-react';
 
@@ -7,6 +6,7 @@ const Navigation = () => {
 
   const navItems = [
     { href: '#about', label: 'About' },
+    { href: '#skills', label: 'Skills' },
     { href: '#projects', label: 'Projects' },
     { href: '#experience', label: 'Experience' },
     { href: '#articles', label: 'Articles' },
