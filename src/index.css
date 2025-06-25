@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -62,15 +63,39 @@
   animation: pulse-glow 2s ease-in-out infinite;
 }
 
+/* Space background utilities */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
 /* Custom minimal scrollbar */
 ::-webkit-scrollbar {
   width: 2px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgb(255, 220, 220);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff0b0b;
+  background: rgba(245, 245, 220, 0.3);
+}
+
+/* Enhanced space effects */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-twinkle {
+  animation: twinkle 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
