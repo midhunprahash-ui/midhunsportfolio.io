@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import { Terminal, Download } from 'lucide-react';
 
@@ -50,7 +51,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-black pt-14">
+    <section id="about" className="min-h-screen flex items-center justify-center bg-transparent pt-14">
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Main Content */}
         <div className="space-y-8">

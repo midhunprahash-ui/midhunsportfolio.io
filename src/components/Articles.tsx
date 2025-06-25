@@ -15,7 +15,7 @@ const Articles = () => {
   ];
 
   return (
-    <section id="articles" className="py-20 bg-black">
+    <section id="articles" className="py-20 bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
         
         {/* Header */}
@@ -39,7 +39,7 @@ const Articles = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <article className="bg-black border border-gray-900 hover:border-amber-100 transition-all duration-300 p-6">
+              <article className="bg-black/80 backdrop-blur-sm border border-gray-900 hover:border-amber-100 transition-all duration-300 p-6">
                 
                 {/* Header */}
                 <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">

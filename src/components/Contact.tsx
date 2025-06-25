@@ -4,7 +4,7 @@ import { Terminal, Github, Mail, MapPin, User } from 'lucide-react';
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-20 bg-black">
+    <section id="contact" className="py-20 bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
 
         {/* Header */}
@@ -20,7 +20,7 @@ const Contact = () => {
 
         {/* Contact Info */}
         <div className="max-w-2xl mx-auto">
-          <div className="bg-black border border-gray-900">
+          <div className="bg-black/80 backdrop-blur-sm border border-gray-900">
 
             {/* Terminal Header */}
             <div className="flex items-center px-4 py-3 border-b border-gray-900">

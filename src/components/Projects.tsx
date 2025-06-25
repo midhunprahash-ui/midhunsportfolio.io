@@ -29,7 +29,7 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-black">
+    <section id="projects" className="py-20 bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header */}
@@ -48,7 +48,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-black border border-gray-900 hover:border-amber-100 transition-all duration-300 group"
+              className="bg-black/80 backdrop-blur-sm border border-gray-900 hover:border-amber-100 transition-all duration-300 group"
             >
               {/* Header */}
               <div className="flex items-center justify-between px-4 py-3 border-b border-gray-900">

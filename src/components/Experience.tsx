@@ -21,7 +21,7 @@ const Experience = () => {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-black">
+    <section id="experience" className="py-20 bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
 
         {/* Header */}
@@ -50,7 +50,7 @@ const Experience = () => {
 
               {/* Content */}
               <div className="ml-12">
-                <div className="bg-black border border-gray-900 p-6 hover:border-amber-100 transition-colors">
+                <div className="bg-black/80 backdrop-blur-sm border border-gray-900 p-6 hover:border-amber-100 transition-colors">
 
                   {/* Header */}
                   <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">
