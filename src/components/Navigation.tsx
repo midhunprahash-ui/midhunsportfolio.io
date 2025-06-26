@@ -1,24 +1,47 @@
 
 import { useState } from 'react';
 import { Terminal, Menu, X } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navItems = [
-    { href: '#about', label: 'About' },
+    { href: '#about', label: 'About', route: '/about' },
     { href: '#projects', label: 'Projects' },
     { href: '#experience', label: 'Experience' },
     { href: '#articles', label: 'Articles' },
     { href: '#contact', label: 'Contact' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (item: typeof navItems[0]) => {
+    if (item.route) {
+      navigate(item.route);
+    } else {
+      // If we're not on the home page, navigate there first
+      if (location.pathname !== '/') {
+        navigate('/');
+        // Small delay to allow navigation, then scroll
+        setTimeout(() => {
+          const element = document.querySelector(item.href);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        const element = document.querySelector(item.href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
     }
     setIsOpen(false);
+  };
+
+  const handleLogoClick = () => {
+    navigate('/');
   };
 
   return (
@@ -27,10 +50,12 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-14">
           {/* Logo */}
           <div className="flex items-center">
-            {/* <Terminal className="w-5 h-5 text-amber-100 mr-3" /> */}
-            <span className="text-sm font-mono text-white">
+            <button 
+              onClick={handleLogoClick}
+              className="text-sm font-mono text-white hover:text-amber-100 transition-colors"
+            >
               Midhun's Portfolio
-            </span>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
@@ -38,7 +63,7 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item)}
                 className="text-xs font-mono text-gray-400 hover:text-amber-100 transition-colors duration-200"
               >
                 {item.label}
@@ -62,7 +87,7 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item)}
                   className="block w-full text-left text-xs font-mono text-gray-400 hover:text-amber-100 py-1"
                 >
                   {item.label}
