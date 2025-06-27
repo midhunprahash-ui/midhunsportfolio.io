@@ -72,9 +72,9 @@ const SpaceBackground = () => {
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
       {/* Main gradient background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />
-      
+
       {/* Deep space gradient overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-gradient-radial from-transparent via-purple-900/10 to-black/50"
         style={{
           transform: `translateY(${scrollY * 0.1}px)`,

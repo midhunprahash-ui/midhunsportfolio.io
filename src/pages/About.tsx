@@ -14,7 +14,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto px-6">
             {/* Header */}
             <div className="text-center mb-16">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">About Me</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">About me</h1>
               <p className="text-xl text-gray-400 max-w-2xl mx-auto">
                 Get to know more about who I am, my journey, and what drives me
               </p>
@@ -36,11 +36,11 @@ const About = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-amber-100 mb-2">Location</h3>
-                    <p className="text-gray-300">Add your location here</p>
+                    <p className="text-gray-300">Chennai</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-amber-100 mb-2">Age</h3>
-                    <p className="text-gray-300">Add your age here</p>
+                    <p className="text-gray-300">21</p>
                   </div>
                 </CardContent>
               </Card>
@@ -56,15 +56,15 @@ const About = () => {
                 <CardContent className="space-y-4">
                   <div>
                     <h3 className="font-semibold text-amber-100 mb-2">Degree</h3>
-                    <p className="text-gray-300">Add your degree here</p>
+                    <p className="text-gray-300">B-Tech</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-amber-100 mb-2">University</h3>
-                    <p className="text-gray-300">Add your university here</p>
+                    <p className="text-gray-300">St.Joseph's Institute of Technology</p>
                   </div>
                   <div>
                     <h3 className="font-semibold text-amber-100 mb-2">Year</h3>
-                    <p className="text-gray-300">Add graduation year here</p>
+                    <p className="text-gray-300">2027</p>
                   </div>
                 </CardContent>
               </Card>
@@ -77,12 +77,12 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Write your personal story here. Talk about your journey, what got you into your field, 
-                  and what motivates you. This is where you can share your background, experiences, 
+                  Write your personal story here. Talk about your journey, what got you into your field,
+                  and what motivates you. This is where you can share your background, experiences,
                   and what makes you unique.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Add more paragraphs about your professional journey, key milestones, 
+                  Add more paragraphs about your professional journey, key milestones,
                   and your vision for the future. Make it personal and authentic.
                 </p>
               </CardContent>
