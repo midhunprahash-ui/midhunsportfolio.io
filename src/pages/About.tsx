@@ -79,16 +79,13 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  I am a passionate software developer with a keen interest in building ML, DL based
-                  innovative solutions that make a difference. My journey began with a
-                  fascination for technology and has evolved into a commitment to creating
-                  impactful applications.
+                  I am a passionate software developer with a strong interest in building ML and DL-based solutions that create real-world impact. My journey began with a curiosity for technology and has evolved into a mission to develop intelligent, user-centric applications.
+                </p>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  I specialize in combining web development (primarily with Django) and machine learning to solve practical problems—such as NER systems for document parsing, username matching using fuzzy logic, and secure access control platforms. I enjoy working on projects that challenge conventional thinking and push technical boundaries.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Throughout my learning journey, I have worked on various projects that challenged me
-                  to think outside the box and push the boundaries of what is possible.
-                  I believe in the power of collaboration and continuously seek opportunities
-                  to learn from others while sharing my knowledge and experiences.
+                  Collaboration and continuous learning are core to my approach. I actively engage in peer learning, code reviews, and open discussions to grow both individually and as part of a team. My goal is to keep exploring the synergy between AI and software engineering to build impactful, scalable solutions.
                 </p>
               </CardContent>
             </Card>
