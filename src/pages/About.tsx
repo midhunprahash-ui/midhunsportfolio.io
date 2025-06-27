@@ -77,13 +77,16 @@ const About = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Write your personal story here. Talk about your journey, what got you into your field,
-                  and what motivates you. This is where you can share your background, experiences,
-                  and what makes you unique.
+                  I am a passionate software developer with a keen interest in building ML, DL based
+                  innovative solutions that make a difference. My journey began with a
+                  fascination for technology and has evolved into a commitment to creating
+                  impactful applications.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Add more paragraphs about your professional journey, key milestones,
-                  and your vision for the future. Make it personal and authentic.
+                  Throughout my learning journey, I have worked on various projects that challenged me
+                  to think outside the box and push the boundaries of what is possible.
+                  I believe in the power of collaboration and continuously seek opportunities
+                  to learn from others while sharing my knowledge and experiences.
                 </p>
               </CardContent>
             </Card>
@@ -97,11 +100,11 @@ const About = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-8">
                   <div className="text-center">
                     <Code className="w-8 h-8 text-amber-100 mx-auto mb-3" />
                     <h3 className="font-semibold mb-2">Coding</h3>
-                    <p className="text-gray-400 text-sm">Building amazing applications</p>
+                    <p className="text-gray-400 text-sm">Building impactful solutions through applications</p>
                   </div>
                   <div className="text-center">
                     <Coffee className="w-8 h-8 text-amber-100 mx-auto mb-3" />
@@ -109,11 +112,11 @@ const About = () => {
                     <p className="text-gray-400 text-sm">Fueling creativity one cup at a time</p>
                   </div>
                   <div className="text-center">
-                    <div className="w-8 h-8 bg-amber-100 rounded-full mx-auto mb-3 flex items-center justify-center">
+                    {/* <div className="w-8 h-8 bg-amber-100 rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-black text-sm font-bold">+</span>
-                    </div>
-                    <h3 className="font-semibold mb-2">Add More</h3>
-                    <p className="text-gray-400 text-sm">Add your own interests here</p>
+                    </div> */}
+                    {/* <h3 className="font-semibold mb-2">Add More</h3>
+                    <p className="text-gray-400 text-sm">Add your own interests here</p> */}
                   </div>
                 </div>
               </CardContent>
