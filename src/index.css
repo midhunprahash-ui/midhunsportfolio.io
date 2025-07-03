@@ -3,8 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Minimal Clean Design System */
-
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -60,43 +58,21 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-weight: 400;
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
     scroll-behavior: smooth;
   }
 
-  /* Clean typography */
   h1, h2, h3, h4, h5, h6 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-weight: 600;
     line-height: 1.2;
     color: hsl(var(--foreground));
   }
-
-  /* Mono font for code */
-  .font-mono {
-    font-family: 'SF Mono', Consolas, 'Liberation Mono', Menlo, monospace;
-  }
 }
 
-/* Minimal animations */
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 0.6s ease-out;
-}
-
-/* Clean scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -112,9 +88,4 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--foreground));
-}
-
-/* Remove text shadows and enhance readability */
-.text-shadow-none {
-  text-shadow: none;
 }

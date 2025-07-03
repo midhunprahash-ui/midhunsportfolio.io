@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Terminal, Briefcase } from 'lucide-react';
+import { Calendar, MapPin } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
@@ -8,6 +8,7 @@ const Experience = () => {
       title: "Training Intern",
       company: "Orion Governance",
       period: "Jun - Jul, 2025",
+      location: "Remote",
       description: "Developed fuzzy string matching algorithms and implemented Python solutions for data analysis with visualization tools.",
       skills: ["Python", "Fuzzy String Matching", "Data Analysis", "Seaborn"]
     },
@@ -15,77 +16,67 @@ const Experience = () => {
       title: "Project Intern",
       company: "AI & Robotics Lab, Excel Group",
       period: "Nov - Dec, 2024",
+      location: "On-site",
       description: "Designed humanoid robot integrated with ChatGPT API for real-time human interaction using advanced NLP techniques.",
       skills: ["NLP", "Python", "Raspberry Pi", "OpenCV", "API Integration"]
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-transparent">
+    <section id="experience" className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-6">
-
-        {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-4">
-            <Terminal className="w-6 h-6 text-amber-100 mr-3" />
-            <h2 className="text-2xl font-mono font-bold text-white">
-              EXPERIENCE
-            </h2>
-          </div>
-          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
+          <h2 className="text-4xl font-light text-gray-900 mb-4">Experience</h2>
+          <p className="text-lg text-gray-600">My professional journey and internships</p>
         </div>
 
-        {/* Timeline */}
         <div className="space-y-12">
           {experiences.map((exp, index) => (
             <div key={index} className="relative">
-
-              {/* Timeline line */}
               {index < experiences.length - 1 && (
-                <div className="absolute left-4 top-8 w-px h-20 bg-gray-900"></div>
+                <div className="absolute left-6 top-12 w-px h-20 bg-gray-200"></div>
               )}
 
-              {/* Timeline dot */}
-              <div className="absolute left-3 top-6 w-2 h-2 bg-amber-100 rounded-full"></div>
-
-              {/* Content */}
-              <div className="ml-12">
-                <div className="bg-black/80 backdrop-blur-sm border border-gray-900 p-6 hover:border-amber-100 transition-colors">
-
-                  {/* Header */}
-                  <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">
-                    <div className="flex items-center">
-                      <Briefcase className="w-4 h-4 text-amber-100 mr-2" />
-                      <span className="text-xs font-mono text-gray-500">INTERNSHIP</span>
+              <div className="flex items-start">
+                <div className="w-3 h-3 bg-gray-900 rounded-full mt-6 mr-8 flex-shrink-0"></div>
+                
+                <div className="flex-grow">
+                  <div className="bg-gray-50 p-8 border border-gray-200">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <div>
+                        <h3 className="text-xl font-medium text-gray-900 mb-1">
+                          {exp.title}
+                        </h3>
+                        <p className="text-gray-600 font-medium">
+                          {exp.company}
+                        </p>
+                      </div>
+                      <div className="flex flex-col md:items-end mt-2 md:mt-0">
+                        <div className="flex items-center text-sm text-gray-500 mb-1">
+                          <Calendar className="w-4 h-4 mr-1" />
+                          {exp.period}
+                        </div>
+                        <div className="flex items-center text-sm text-gray-500">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          {exp.location}
+                        </div>
+                      </div>
                     </div>
-                    <span className="text-xs font-mono text-gray-500">{exp.period}</span>
-                  </div>
 
-                  {/* Title and Company */}
-                  <div className="mb-4">
-                    <h3 className="text-lg font-mono font-bold text-white mb-1">
-                      {exp.title}
-                    </h3>
-                    <p className="text-amber-100 font-mono text-sm">
-                      {exp.company}
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {exp.description}
                     </p>
-                  </div>
 
-                  {/* Description */}
-                  <p className="text-gray-400 text-sm mb-4 leading-relaxed">
-                    {exp.description}
-                  </p>
-
-                  {/* Skills */}
-                  <div className="flex flex-wrap gap-2">
-                    {exp.skills.map((skill, skillIndex) => (
-                      <span
-                        key={skillIndex}
-                        className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                    <div className="flex flex-wrap gap-2">
+                      {exp.skills.map((skill, skillIndex) => (
+                        <span
+                          key={skillIndex}
+                          className="text-xs px-3 py-1 bg-white border border-gray-200 text-gray-700"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

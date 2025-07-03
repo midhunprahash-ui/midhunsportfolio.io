@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import { Terminal, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
@@ -20,10 +20,8 @@ const Navigation = () => {
     if (item.route) {
       navigate(item.route);
     } else {
-      // If we're not on the home page, navigate there first
       if (location.pathname !== '/') {
         navigate('/');
-        // Small delay to allow navigation, then scroll
         setTimeout(() => {
           const element = document.querySelector(item.href);
           if (element) {
@@ -45,50 +43,44 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-900 backdrop-filter backdrop-blur-md bg-opacity-30 bg-black">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-14">
-          {/* Logo */}
-          <div className="flex items-center">
-            <button 
-              onClick={handleLogoClick}
-              className="text-sm font-mono text-white hover:text-amber-100 transition-colors"
-            >
-              Midhun's Portfolio
-            </button>
-          </div>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex justify-between items-center h-16">
+          <button 
+            onClick={handleLogoClick}
+            className="text-xl font-semibold text-gray-900 hover:text-gray-600 transition-colors"
+          >
+            Midhun
+          </button>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item)}
-                className="text-xs font-mono text-gray-400 hover:text-amber-100 transition-colors duration-200"
+                className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
                 {item.label}
               </button>
             ))}
           </div>
 
-          {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-400 hover:text-amber-100"
+            className="md:hidden text-gray-600 hover:text-gray-900"
           >
-            {isOpen ? <X size={18} /> : <Menu size={18} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-black border-t border-gray-900">
+          <div className="md:hidden bg-white border-t border-gray-100">
             <div className="py-4 space-y-3">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item)}
-                  className="block w-full text-left text-xs font-mono text-gray-400 hover:text-amber-100 py-1"
+                  className="block w-full text-left text-sm text-gray-600 hover:text-gray-900 py-2"
                 >
                   {item.label}
                 </button>

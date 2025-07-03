@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Code, Github, Monitor } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 
 const Projects = () => {
   const projects = [
@@ -10,97 +10,88 @@ const Projects = () => {
       tech: ["Python", "Fuzzy Logic", "NLP", "RF-Classifier"],
       link: "https://username-matcher.onrender.com",
       github: "https://github.com/midhunprahash-ui/Username_matcher.git",
-      status: "LIVE"
+      status: "Live"
     },
     {
       title: "StudentAi - RAG & LLM",
       description: "AI-powered educational assistant using Retrieval-Augmented Generation with FAISS vector database and LangChain.",
       tech: ["FAISS", "LangChain", "Vector DB", "OpenAI API"],
       github: "https://github.com/midhunprahash-ui/Student.Ai.git",
-      status: "DEV"
+      status: "Development"
     },
     {
       title: "AI Smart Mirror",
       description: "Computer vision-powered smart mirror using YOLOv8 for real-time hair density tracking and wellness insights.",
       tech: ["YOLOv8", "OpenCV", "Computer Vision", "Python"],
       github: "https://github.com/midhunprahash-ui/Hair_volume_analyzer.git",
-      status: "DEV"
+      status: "Development"
     }
   ];
 
   return (
-    <section id="projects" className="py-20 bg-transparent">
+    <section id="projects" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6">
-        
-        {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-4">
-            <Code className="w-6 h-6 text-amber-100 mr-3" />
-            <h2 className="text-2xl font-mono font-bold text-white">
-              PROJECTS
-            </h2>
-          </div>
-          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
+          <h2 className="text-4xl font-light text-gray-900 mb-4">Selected Projects</h2>
+          <p className="text-lg text-gray-600">A showcase of my recent work and experiments</p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-black/80 backdrop-blur-sm border border-gray-900 hover:border-amber-100 transition-all duration-300 group"
+              className="bg-white border border-gray-200 hover:shadow-lg transition-all duration-300 group"
             >
-              {/* Header */}
-              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-900">
-                <span className="text-xs font-mono text-gray-500">{project.title}</span>
-                <span className={`text-xs font-mono ${project.status === 'LIVE' ? 'text-amber-100' : 'text-gray-500'}`}>
-                  {project.status}
-                </span>
-              </div>
+              <div className="p-8">
+                <div className="flex items-center justify-between mb-4">
+                  <span className={`text-xs px-3 py-1 rounded-full ${
+                    project.status === 'Live' 
+                      ? 'bg-green-100 text-green-800' 
+                      : 'bg-yellow-100 text-yellow-800'
+                  }`}>
+                    {project.status}
+                  </span>
+                </div>
 
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-lg font-mono font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
+                <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-600 transition-colors">
                   {project.title}
                 </h3>
                 
-                <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
-                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
+                      className="text-xs px-3 py-1 bg-gray-100 text-gray-700"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                {/* Links */}
                 <div className="flex space-x-4">
                   {project.link && (
                     <a
                       href={project.link}
-                      className="flex items-center text-amber-100 hover:text-amber-200 text-xs font-mono"
+                      className="flex items-center text-gray-900 hover:text-gray-600 text-sm transition-colors"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Monitor className="w-3 h-3 mr-1" />
-                      DEMO
+                      <ExternalLink className="w-4 h-4 mr-2" />
+                      Live Demo
                     </a>
                   )}
                   <a
                     href={project.github}
-                    className="flex items-center text-gray-400 hover:text-white text-xs font-mono"
+                    className="flex items-center text-gray-600 hover:text-gray-900 text-sm transition-colors"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="w-3 h-3 mr-1" />
-                    CODE
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
                   </a>
                 </div>
               </div>

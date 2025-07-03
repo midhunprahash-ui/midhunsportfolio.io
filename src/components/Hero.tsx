@@ -1,49 +1,11 @@
 
-import React, { useState, useEffect } from 'react';
-import { Terminal, Download } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Download } from 'lucide-react';
 
 const Hero = () => {
-  const [currentCommand, setCurrentCommand] = useState(0);
-  const [displayText, setDisplayText] = useState('');
-  const [showCursor, setShowCursor] = useState(true);
-
-  const commands = [
-    'ML Engineer',
-    'Problem Solver',
-    'AI Researcher',
-    'Code Architect'
-  ];
-
-  useEffect(() => {
-    const typeCommand = () => {
-      const command = commands[currentCommand];
-      let i = 0;
-      const timer = setInterval(() => {
-        setDisplayText(command.slice(0, i));
-        i++;
-        if (i > command.length) {
-          clearInterval(timer);
-          setTimeout(() => {
-            setCurrentCommand((prev) => (prev + 1) % commands.length);
-          }, 2000);
-        }
-      }, 100);
-    };
-
-    typeCommand();
-  }, [currentCommand]);
-
-  useEffect(() => {
-    const cursorTimer = setInterval(() => {
-      setShowCursor(prev => !prev);
-    }, 500);
-    return () => clearInterval(cursorTimer);
-  }, []);
-
   const handleDownloadResume = () => {
-    // Create a temporary link element to trigger download
     const link = document.createElement('a');
-    link.href = 'resume.pdf'; // You'll need to add your resume.pdf to the public folder
+    link.href = 'resume.pdf';
     link.download = 'Midhun_Prahash_Resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -51,41 +13,34 @@ const Hero = () => {
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-transparent pt-14">
+    <section id="about" className="min-h-screen flex items-center justify-center bg-white pt-16">
       <div className="max-w-4xl mx-auto px-6 text-center">
-        {/* Main Content */}
         <div className="space-y-8">
-          <div>
-            <h1 className="text-3xl md:text-5xl font-mono font-bold text-white mb-4">
-              Hello! I'm Midhun
+          <div className="space-y-6">
+            <h1 className="text-5xl md:text-7xl font-light text-gray-900 leading-tight">
+              Hello, I'm
+              <span className="block font-medium">Midhun</span>
             </h1>
-            {/* <div className="w-20 h-px bg-amber-100 mx-auto mb-6"></div> */}
-            <p className="text-lg text-gray-400 max-w-1xl mx-auto leading-relaxed">
-              Building intelligent systems that solve real-world challenges through
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              I build intelligent systems and solve real-world problems through 
               machine learning, computer vision, and innovative AI solutions.
             </p>
           </div>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-8">
             <button
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-amber-100 text-black font-mono text-sm hover:bg-amber-200 transition-colors"
+              className="group px-8 py-4 bg-gray-900 text-white hover:bg-gray-800 transition-all duration-200 flex items-center justify-center gap-2"
             >
-              VIEW_PROJECTS
+              View Projects
+              <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={handleDownloadResume}
-              className="px-8 py-3 border border-amber-100 text-amber-100 font-mono text-sm hover:bg-amber-100 hover:text-black transition-colors flex items-center justify-center gap-2"
+              className="px-8 py-4 border border-gray-300 text-gray-900 hover:border-gray-900 transition-colors flex items-center justify-center gap-2"
             >
               <Download size={16} />
-              DOWNLOAD_RESUME
-            </button>
-            <button
-              onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border border-amber-100 text-amber-100 font-mono text-sm hover:bg-amber-100 hover:text-black transition-colors"
-            >
-              CONTACT
+              Resume
             </button>
           </div>
         </div>
