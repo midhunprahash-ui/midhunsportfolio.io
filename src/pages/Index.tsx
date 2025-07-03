@@ -5,12 +5,12 @@ import Projects from '../components/Projects';
 import Experience from '../components/Experience';
 import Articles from '../components/Articles';
 import Contact from '../components/Contact';
-import AtomVisualization from '../components/AtomVisualization';
+import MinimalBackground from '../components/MinimalBackground';
 
 const Index = () => {
   return (
     <div className="min-h-screen relative">
-      <AtomVisualization />
+      <MinimalBackground />
       <div className="relative z-10">
         <Navigation />
         <Hero />
