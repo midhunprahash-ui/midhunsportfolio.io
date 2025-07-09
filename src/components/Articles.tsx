@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink, Calendar, Clock } from 'lucide-react';
+import { Code, ExternalLink } from 'lucide-react';
 
 const Articles = () => {
   const articles = [
@@ -15,13 +15,21 @@ const Articles = () => {
   ];
 
   return (
-    <section id="articles" className="py-20 bg-gray-50">
+    <section id="articles" className="py-20 bg-transparent">
       <div className="max-w-4xl mx-auto px-6">
+        
+        {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-light text-gray-900 mb-4">Articles</h2>
-          <p className="text-lg text-gray-600">Thoughts and tutorials on technology</p>
+          <div className="flex items-center justify-center mb-4">
+            <Code className="w-6 h-6 text-amber-100 mr-3" />
+            <h2 className="text-2xl font-mono font-bold text-white">
+              ARTICLES
+            </h2>
+          </div>
+          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
         </div>
 
+        {/* Articles */}
         <div className="space-y-8">
           {articles.map((article, index) => (
             <a
@@ -31,45 +39,44 @@ const Articles = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <article className="bg-white border border-gray-200 hover:shadow-lg transition-all duration-300 p-8">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="flex items-center text-sm text-gray-500 space-x-4">
-                    <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
-                      {article.date}
-                    </div>
-                    <div className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
-                      {article.readTime}
-                    </div>
+              <article className="bg-black/80 backdrop-blur-sm border border-gray-900 hover:border-amber-100 transition-all duration-300 p-6">
+                
+                {/* Header */}
+                <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">
+                  <div className="flex items-center text-xs font-mono text-gray-500">
+                    <span>{article.date}</span>
+                    <span className="mx-2">•</span>
+                    <span>{article.readTime}</span>
                   </div>
-                  <span className="text-xs px-3 py-1 bg-blue-100 text-blue-800 rounded-full">
-                    Published
-                  </span>
+                  <span className="text-xs font-mono text-amber-100">PUBLISHED</span>
                 </div>
 
-                <h3 className="text-2xl font-medium text-gray-900 mb-3 group-hover:text-gray-600 transition-colors">
+                {/* Title */}
+                <h3 className="text-xl font-mono font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
                   {article.title}
                 </h3>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                {/* Excerpt */}
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                   {article.excerpt}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                {/* Tags */}
+                <div className="flex flex-wrap gap-2 mb-4">
                   {article.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="text-xs px-3 py-1 bg-gray-100 text-gray-700"
+                      className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center text-gray-900 group-hover:text-gray-600 transition-colors">
-                  <ExternalLink className="w-4 h-4 mr-2" />
-                  <span className="text-sm">Read Article</span>
+                {/* Read more */}
+                <div className="flex items-center text-amber-100 text-xs font-mono group-hover:text-amber-200 transition-colors">
+                  <ExternalLink className="w-3 h-3 mr-2" />
+                  <span>READ_ARTICLE</span>
                 </div>
               </article>
             </a>
