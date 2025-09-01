@@ -20,7 +20,7 @@ const Projects = () => {
       status: "DEV"
     },
     {
-      title: "AI Smart Mirror",
+      title: "Hidden suicide intention detection using BiLSTM + DistilBERT + Psycholinguistic feature infusion",
       description: "Computer vision-powered smart mirror using YOLOv8 for real-time hair density tracking and wellness insights.",
       tech: ["YOLOv8", "OpenCV", "Computer Vision", "Python"],
       github: "https://github.com/midhunprahash-ui/Hair_volume_analyzer.git",
@@ -31,7 +31,7 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-transparent">
       <div className="max-w-6xl mx-auto px-6">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="flex items-center justify-center mb-4">
@@ -63,7 +63,7 @@ const Projects = () => {
                 <h3 className="text-lg font-mono font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
                   {project.title}
                 </h3>
-                
+
                 <p className="text-sm text-gray-400 mb-4 leading-relaxed">
                   {project.description}
                 </p>
