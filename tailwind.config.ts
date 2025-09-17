@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'sans': ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+				'sans': ['Google Sans', 'Roboto', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica Neue', 'Arial', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -55,7 +54,24 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				google: {
+					blue: 'hsl(var(--google-blue))',
+					'blue-dark': 'hsl(var(--google-blue-dark))',
+					gray: {
+						50: 'hsl(var(--google-gray-50))',
+						100: 'hsl(var(--google-gray-100))',
+						200: 'hsl(var(--google-gray-200))',
+						300: 'hsl(var(--google-gray-300))',
+						600: 'hsl(var(--google-gray-600))',
+						900: 'hsl(var(--google-gray-900))',
+					}
 				}
+			},
+			boxShadow: {
+				'google-sm': 'var(--shadow-sm)',
+				'google-md': 'var(--shadow-md)',
+				'google-lg': 'var(--shadow-lg)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
