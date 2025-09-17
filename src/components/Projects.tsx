@@ -29,18 +29,17 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-transparent">
+    <section id="projects" className="py-24 bg-background">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-4">
-            <Code className="w-6 h-6 text-amber-100 mr-3" />
-            <h2 className="text-2xl font-mono font-bold text-white">
-              PROJECTS
-            </h2>
-          </div>
-          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
+          <h2 className="text-3xl font-medium text-foreground mb-4">
+            Projects
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            A collection of projects showcasing machine learning, AI research, and software development.
+          </p>
         </div>
 
         {/* Projects Grid */}
@@ -48,23 +47,26 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-black/80 backdrop-blur-sm border border-gray-900 hover:border-amber-100 transition-all duration-300 group"
+              className="bg-card border border-border rounded-lg hover:shadow-google-lg transition-all duration-300 group overflow-hidden"
             >
               {/* Header */}
-              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-900">
-                <span className="text-xs font-mono text-gray-500">{project.title}</span>
-                <span className={`text-xs font-mono ${project.status === 'LIVE' ? 'text-amber-100' : 'text-gray-500'}`}>
+              <div className="flex items-center justify-between px-6 py-4 border-b border-border">
+                <span className={`text-sm font-medium px-3 py-1 rounded-full ${
+                  project.status === 'LIVE' 
+                    ? 'bg-green-100 text-green-800' 
+                    : 'bg-orange-100 text-orange-800'
+                }`}>
                   {project.status}
                 </span>
               </div>
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="text-lg font-mono font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
+                <h3 className="text-lg font-medium text-foreground mb-3 group-hover:text-primary transition-colors">
                   {project.title}
                 </h3>
 
-                <p className="text-sm text-gray-400 mb-4 leading-relaxed">
+                <p className="text-sm text-muted-foreground mb-6 leading-relaxed">
                   {project.description}
                 </p>
 
@@ -73,7 +75,7 @@ const Projects = () => {
                   {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
+                      className="px-3 py-1 bg-muted text-muted-foreground text-xs rounded-full font-medium"
                     >
                       {tech}
                     </span>
@@ -85,22 +87,22 @@ const Projects = () => {
                   {project.link && (
                     <a
                       href={project.link}
-                      className="flex items-center text-amber-100 hover:text-amber-200 text-xs font-mono"
+                      className="flex items-center text-primary hover:text-primary/80 text-sm font-medium"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Monitor className="w-3 h-3 mr-1" />
-                      DEMO
+                      <Monitor className="w-4 h-4 mr-2" />
+                      Demo
                     </a>
                   )}
                   <a
                     href={project.github}
-                    className="flex items-center text-gray-400 hover:text-white text-xs font-mono"
+                    className="flex items-center text-muted-foreground hover:text-foreground text-sm font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Github className="w-3 h-3 mr-1" />
-                    CODE
+                    <Github className="w-4 h-4 mr-2" />
+                    Code
                   </a>
                 </div>
               </div>

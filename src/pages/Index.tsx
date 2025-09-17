@@ -9,16 +9,13 @@ import AtomVisualization from '../components/AtomVisualization';
 
 const Index = () => {
   return (
-    <div className="min-h-screen relative">
-      <AtomVisualization />
-      <div className="relative z-10">
-        <Navigation />
-        <Hero />
-        <Projects />
-        <Experience />
-        <Articles />
-        <Contact />
-      </div>
+    <div className="min-h-screen bg-background">
+      <Navigation />
+      <Hero />
+      <Projects />
+      <Experience />
+      <Articles />
+      <Contact />
     </div>
   );
 };

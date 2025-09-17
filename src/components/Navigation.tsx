@@ -45,16 +45,16 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 border-b border-gray-900 backdrop-filter backdrop-blur-md bg-opacity-30 bg-black">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-14">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
             <button 
               onClick={handleLogoClick}
-              className="text-sm font-mono text-white hover:text-amber-100 transition-colors"
+              className="text-lg font-medium text-foreground hover:text-primary transition-colors"
             >
-              Midhun's Portfolio
+              Midhun Prahash
             </button>
           </div>
 
@@ -64,7 +64,7 @@ const Navigation = () => {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item)}
-                className="text-xs font-mono text-gray-400 hover:text-amber-100 transition-colors duration-200"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200 font-medium"
               >
                 {item.label}
               </button>
@@ -74,21 +74,21 @@ const Navigation = () => {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-400 hover:text-amber-100"
+            className="md:hidden text-muted-foreground hover:text-primary"
           >
-            {isOpen ? <X size={18} /> : <Menu size={18} />}
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden bg-black border-t border-gray-900">
+          <div className="md:hidden bg-background border-t border-border">
             <div className="py-4 space-y-3">
               {navItems.map((item) => (
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item)}
-                  className="block w-full text-left text-xs font-mono text-gray-400 hover:text-amber-100 py-1"
+                  className="block w-full text-left text-sm text-muted-foreground hover:text-primary py-2 font-medium"
                 >
                   {item.label}
                 </button>

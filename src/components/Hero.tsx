@@ -51,41 +51,40 @@ const Hero = () => {
   };
 
   return (
-    <section id="about" className="min-h-screen flex items-center justify-center bg-transparent pt-14">
+    <section id="about" className="min-h-screen flex items-center justify-center pt-16 bg-background">
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Main Content */}
-        <div className="space-y-8">
-          <div>
-            <h1 className="text-3xl md:text-5xl font-mono font-bold text-white mb-4">
-              Hello! I'm Midhun
+        <div className="space-y-12">
+          <div className="space-y-6">
+            <h1 className="text-4xl md:text-6xl font-medium text-foreground mb-6">
+              Hello, I'm Midhun
             </h1>
-            {/* <div className="w-20 h-px bg-amber-100 mx-auto mb-6"></div> */}
-            <p className="text-lg text-gray-400 max-w-1xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               Building intelligent systems that solve real-world challenges through
               machine learning, computer vision, and innovative AI solutions.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button
               onClick={() => document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-amber-100 text-black font-mono text-sm hover:bg-amber-200 transition-colors"
+              className="px-8 py-3 bg-primary text-primary-foreground rounded-md font-medium hover:bg-primary/90 transition-colors shadow-google-md"
             >
-              VIEW_PROJECTS
+              View Projects
             </button>
             <button
               onClick={handleDownloadResume}
-              className="px-8 py-3 border border-amber-100 text-amber-100 font-mono text-sm hover:bg-amber-100 hover:text-black transition-colors flex items-center justify-center gap-2"
+              className="px-8 py-3 border border-border text-foreground rounded-md font-medium hover:bg-muted transition-colors flex items-center justify-center gap-2"
             >
-              <Download size={16} />
-              DOWNLOAD_RESUME
+              <Download size={18} />
+              Download Resume
             </button>
             <button
               onClick={() => document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 border border-amber-100 text-amber-100 font-mono text-sm hover:bg-amber-100 hover:text-black transition-colors"
+              className="px-8 py-3 border border-border text-foreground rounded-md font-medium hover:bg-muted transition-colors"
             >
-              CONTACT
+              Contact
             </button>
           </div>
         </div>

@@ -15,22 +15,21 @@ const Articles = () => {
   ];
 
   return (
-    <section id="articles" className="py-20 bg-transparent">
+    <section id="articles" className="py-24 bg-background">
       <div className="max-w-4xl mx-auto px-6">
         
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center mb-4">
-            <Code className="w-6 h-6 text-amber-100 mr-3" />
-            <h2 className="text-2xl font-mono font-bold text-white">
-              ARTICLES
-            </h2>
-          </div>
-          <div className="w-16 h-px bg-amber-100 mx-auto"></div>
+          <h2 className="text-3xl font-medium text-foreground mb-4">
+            Articles
+          </h2>
+          <p className="text-lg text-muted-foreground">
+            Technical writing and insights on machine learning, APIs, and development.
+          </p>
         </div>
 
         {/* Articles */}
-        <div className="space-y-8">
+        <div className="space-y-6">
           {articles.map((article, index) => (
             <a
               key={index}
@@ -39,25 +38,27 @@ const Articles = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <article className="bg-black/80 backdrop-blur-sm border border-gray-900 hover:border-amber-100 transition-all duration-300 p-6">
+              <article className="bg-card border border-border rounded-lg hover:shadow-google-lg transition-all duration-300 p-6">
                 
                 {/* Header */}
-                <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-900">
-                  <div className="flex items-center text-xs font-mono text-gray-500">
+                <div className="flex items-center justify-between mb-4 pb-4 border-b border-border">
+                  <div className="flex items-center text-sm text-muted-foreground">
                     <span>{article.date}</span>
                     <span className="mx-2">•</span>
                     <span>{article.readTime}</span>
                   </div>
-                  <span className="text-xs font-mono text-amber-100">PUBLISHED</span>
+                  <span className="text-sm font-medium px-3 py-1 bg-green-100 text-green-800 rounded-full">
+                    Published
+                  </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-mono font-bold text-white mb-3 group-hover:text-amber-100 transition-colors">
+                <h3 className="text-xl font-medium text-foreground mb-4 group-hover:text-primary transition-colors">
                   {article.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+                <p className="text-muted-foreground mb-6 leading-relaxed">
                   {article.excerpt}
                 </p>
 
@@ -66,7 +67,7 @@ const Articles = () => {
                   {article.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-2 py-1 bg-gray-900 text-amber-100 text-xs font-mono"
+                      className="px-3 py-1 bg-muted text-muted-foreground text-sm rounded-full font-medium"
                     >
                       {tag}
                     </span>
@@ -74,9 +75,9 @@ const Articles = () => {
                 </div>
 
                 {/* Read more */}
-                <div className="flex items-center text-amber-100 text-xs font-mono group-hover:text-amber-200 transition-colors">
-                  <ExternalLink className="w-3 h-3 mr-2" />
-                  <span>READ_ARTICLE</span>
+                <div className="flex items-center text-primary text-sm font-medium group-hover:text-primary/80 transition-colors">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  <span>Read Article</span>
                 </div>
               </article>
             </a>
